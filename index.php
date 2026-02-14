@@ -14,16 +14,6 @@
 <body>
 
     <?php include 'includes/header.php'; ?>
-    <?php include 'components/hero.php'; ?>
-
-    <main style="padding: 50px 0; text-align: center;">
-        <div class="container">
-            <h1>Welcome to Global Rise Foundation</h1>
-            <p>Empowering communities, rising together.</p>
-            <br>
-            <p><em>(Content goes here)</em></p>
-        </div>
-    </main>
 
     <?php include 'includes/footer.php'; ?>
 
