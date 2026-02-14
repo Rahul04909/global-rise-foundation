@@ -11,7 +11,7 @@
             </div>
         </div>
         <!-- Slide 2 -->
-        <div class="slide" style="background-image: url('https://placehold.co/1920x800/1D3557/FFFFFF?text=Education+for+All');">
+        <div class="slide" style="background-image: url('assets/hero/health-banner.png');">
             <div class="container">
                 <div class="slide-content">
                     <h1>Education is the Key to Freedom</h1>
@@ -21,7 +21,7 @@
             </div>
         </div>
         <!-- Slide 3 -->
-        <div class="slide" style="background-image: url('https://placehold.co/1920x800/457B9D/FFFFFF?text=Health+&+Wellbeing');">
+        <div class="slide" style="background-image: url('assets/hero/health-banner.png');">
             <div class="container">
                 <div class="slide-content">
                     <h1>Health & Wellbeing for Everyone</h1>
