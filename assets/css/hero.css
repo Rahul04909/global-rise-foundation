@@ -236,7 +236,7 @@
     .hero-slider {
         height: 80vh;
         /* Fixed height for tall look */
-        min-height: 550px;
+        min-height: 300px;
         /* Removed padding-bottom to fix white space issue */
     }
 
