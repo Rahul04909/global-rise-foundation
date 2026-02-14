@@ -10,11 +10,13 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/mission.css">
+    <link rel="stylesheet" href="assets/css/gallery.css">
 </head>
 <body>
 
     <?php include 'includes/header.php'; ?>
     <?php include 'components/mission.php'; ?>
+    <?php include 'components/gallery.php'; ?>
 
     <?php include 'includes/footer.php'; ?>
 
