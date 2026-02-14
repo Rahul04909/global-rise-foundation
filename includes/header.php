@@ -16,6 +16,7 @@
                 <li><a href="#">Contact</a></li>
             </ul>
             <a href="#" class="btn-donate">Donate Now</a>
+            <a href="" class="btn-donate">Join as a Volunteer</a>
         </nav>
 
         <!-- Mobile Menu Toggle -->
@@ -46,7 +47,6 @@
         </ul>
         <div class="sidebar-donate">
             <a href="#" class="btn-donate">Donate Now</a>
-            <a href="" class="btn-donate">Join as a Volunteer</a>
         </div>
     </div>
 </div>
