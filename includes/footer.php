@@ -43,15 +43,15 @@
             <h3>Contact Us</h3>
             <div class="footer-contact-item">
                 <i class="fas fa-map-marker-alt"></i>
-                <p>123 NGO Street,  Foundation City, FC 45678</p>
+                <p>H NO 49, Gothra Mohabtabad, Adarash Public School, Pali, Ballabgarh, Faridabad- 121004, Haryana</p>
             </div>
             <div class="footer-contact-item">
                 <i class="fas fa-phone-alt"></i>
-                <p>+1 (123) 456-7890</p>
+                <p>+91 7292007777</p>
             </div>
             <div class="footer-contact-item">
                 <i class="fas fa-envelope"></i>
-                <p>info@globalrisefoundation.org</p>
+                <p>info@theglobalrisefoundation.com</p>
             </div>
             <a href="#" class="footer-btn">Donate Now</a>
         </div>

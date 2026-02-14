@@ -1,0 +1,86 @@
+/* Mission Section Styles */
+.mission-section {
+    padding: 60px 0;
+    background-color: #FFF8E7;
+    /* Light beige background from image */
+    text-align: center;
+}
+
+.mission-heading {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+.mission-heading span {
+    color: var(--primary-color);
+    /* Orange/Red highlight */
+}
+
+.mission-banner-wrapper {
+    margin-bottom: 50px;
+    position: relative;
+    padding: 0 20px;
+}
+
+.mission-banner-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    /* Soften edges */
+}
+
+.mission-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mission-col {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.mission-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #555;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.mission-title span {
+    color: var(--primary-color);
+    /* Highlight color */
+}
+
+.mission-desc {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .mission-heading {
+        font-size: 22px;
+        padding: 0 15px;
+    }
+
+    .mission-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .mission-col {
+        padding: 0;
+    }
+}
