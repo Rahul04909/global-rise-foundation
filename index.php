@@ -14,7 +14,6 @@
 <body>
 
     <?php include 'includes/header.php'; ?>
-    <?php include 'components/hero.php'; ?>
     <?php include 'components/mission.php'; ?>
 
     <?php include 'includes/footer.php'; ?>
