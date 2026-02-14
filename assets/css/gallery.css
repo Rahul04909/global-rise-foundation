@@ -1,47 +1,58 @@
 /* Gallery Ticker Styles */
 .gallery-section {
-    padding: 20px 0;
-    /* Reduced padding for a ticker feel */
-    background-color: #f9f9f9;
+    padding: 40px 0;
+    background-color: #ffffff;
     overflow: hidden;
-    /* Hide scrollbar */
 }
 
 .gallery-container {
     width: 100%;
     overflow: hidden;
-    white-space: nowrap;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Gap between rows */
 }
 
 .gallery-track {
     display: flex;
     gap: 20px;
     width: max-content;
-    animation: scroll 40s linear infinite;
-    /* Adjust speed here */
+}
+
+.gallery-track.scroll-left {
+    animation: scroll-left 40s linear infinite;
+}
+
+.gallery-track.scroll-right {
+    animation: scroll-right 45s linear infinite;
+    /* Slightly different speed */
 }
 
 .gallery-track:hover {
     animation-play-state: paused;
-    /* Pause on hover for interaction */
 }
 
 .gallery-item {
     flex: 0 0 auto;
-    width: 300px;
-    /* Fixed width for consistent ticker items */
-    height: 200px;
+    width: 250px;
+    /* Slightly smaller for density */
+    height: 180px;
     border-radius: 8px;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Softer shadow */
     transition: transform 0.3s ease;
+    background: #fff;
+    border: 1px solid #eee;
 }
 
 .gallery-item:hover {
     transform: scale(1.05);
     z-index: 10;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .gallery-item img {
@@ -51,27 +62,39 @@
     display: block;
 }
 
-/* Keyframes for smooth infinite scrolling */
-@keyframes scroll {
+/* Keyframes */
+@keyframes scroll-left {
     0% {
         transform: translateX(0);
     }
 
     100% {
-        /* Move continuously to the left. 
-           Since we duplicate the content, moving -50% (half the total track) 
-           brings us to the start of the duplicate set, creating a seamless loop. 
-        */
         transform: translateX(-50%);
+    }
+}
+
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
     }
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .gallery-item {
-        width: 200px;
-        height: 150px;
+        width: 180px;
+        height: 130px;
     }
 
-    /* Enhance speed on mobile if needed, usually same speed is fine */
+    .gallery-track {
+        gap: 15px;
+    }
+
+    .gallery-container {
+        gap: 15px;
+    }
 }
