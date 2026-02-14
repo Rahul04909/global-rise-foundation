@@ -6,35 +6,69 @@
             </a>
         </div>
         
-        <nav class="main-nav">
-            <div class="menu-toggle" id="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </div>
+        <!-- Desktop Nav -->
+        <nav class="main-nav desktop-nav">
             <ul class="nav-links">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Our Work</a></li>
                 <li><a href="#">Get Involved</a></li>
                 <li><a href="#">Contact</a></li>
-                <!-- Mobile only donate button could go here if needed, but keeping it simple -->
             </ul>
             <a href="#" class="btn-donate">Donate Now</a>
         </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <div class="menu-toggle" id="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
     </div>
 </header>
+
+<!-- Mobile Sidebar -->
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+<div class="mobile-sidebar" id="mobile-sidebar">
+    <div class="sidebar-header">
+        <div class="sidebar-logo">
+            <img src="assets/logo.png" alt="Global Rise Foundation">
+        </div>
+        <div class="close-sidebar" id="close-sidebar">
+            <i class="fas fa-times"></i>
+        </div>
+    </div>
+    <div class="sidebar-content">
+        <ul class="sidebar-links">
+            <li><a href="index.php">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Work</a></li>
+            <li><a href="#">Get Involved</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="sidebar-donate">
+            <a href="#" class="btn-donate">Donate Now</a>
+        </div>
+    </div>
+</div>
+
 <script>
-    document.getElementById('mobile-menu').addEventListener('click', function() {
-        const navLinks = document.querySelector('.nav-links');
-        navLinks.classList.toggle('active');
-        
-        // Simple icon toggle
-        const icon = this.querySelector('i');
-        if (navLinks.classList.contains('active')) {
-            icon.classList.remove('fa-bars');
-            icon.classList.add('fa-times');
-        } else {
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
-        }
-    });
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileSidebar = document.getElementById('mobile-sidebar');
+    const sidebarOverlay = document.getElementById('sidebar-overlay');
+    const closeSidebar = document.getElementById('close-sidebar');
+
+    function openSidebar() {
+        mobileSidebar.classList.add('active');
+        sidebarOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+    }
+
+    function closeSidebarFunc() {
+        mobileSidebar.classList.remove('active');
+        sidebarOverlay.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+    }
+
+    mobileMenuToggle.addEventListener('click', openSidebar);
+    closeSidebar.addEventListener('click', closeSidebarFunc);
+    sidebarOverlay.addEventListener('click', closeSidebarFunc);
 </script>
