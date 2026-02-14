@@ -5,33 +5,12 @@
     <div class="hero-slider">
         <!-- Slide 1 -->
         <div class="hero-slide active" style="background-image: url('assets/hero/health-banner.png');">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Empowering Communities for a Better Future</h1>
-                    <p>Join us in our mission to bring sustainable change to the world.</p>
-                    <a href="#" class="btn-hero">Learn More</a>
-                </div>
-            </div>
         </div>
         <!-- Slide 2 -->
         <div class="hero-slide" style="background-image: url('assets/frontend/mission-banner.avif');">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Health & Well-being for Everyone</h1>
-                    <p>Providing essential healthcare services to those in need.</p>
-                    <a href="#" class="btn-hero">Our Programs</a>
-                </div>
-            </div>
         </div>
         <!-- Slide 3 -->
         <div class="hero-slide" style="background-image: url('assets/hero/health-banner.png');">
-             <div class="container">
-                <div class="hero-content">
-                    <h1>Education for Every Child</h1>
-                    <p>Building a brighter future through quality education.</p>
-                    <a href="#" class="btn-hero">Donate Now</a>
-                </div>
-            </div>
         </div>
     </div>
 
