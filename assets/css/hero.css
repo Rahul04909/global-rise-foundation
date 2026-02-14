@@ -167,11 +167,11 @@
 /* Mobile Responsiveness */
 @media (max-width: 992px) {
     .slide-content h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .hero-slider {
-        height: 70vh;
+        height: 50vh;
     }
 }
 
@@ -220,7 +220,7 @@
     }
 
     .hero-slider {
-        min-height: 300px;
+        min-height: 200px;
     }
 
     .slider-dots {
