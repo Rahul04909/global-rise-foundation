@@ -1,94 +1,100 @@
-<section class="hero-slider">
-    <div class="slider-container">
+<?php
+// Hero Section Component
+?>
+<section class="hero-section">
+    <div class="hero-slider">
         <!-- Slide 1 -->
-        <div class="slide active" style="background-image: url('assets/hero/health-banner.png');">
+        <div class="hero-slide active" style="background-image: url('assets/hero/health-banner.png');">
             <div class="container">
-                <div class="slide-content">
-                    <h1>Empowering Communities, One Step at a Time</h1>
-                    <p>Join us in our mission to create sustainable change and a brighter future for all.</p>
+                <div class="hero-content">
+                    <h1>Empowering Communities for a Better Future</h1>
+                    <p>Join us in our mission to bring sustainable change to the world.</p>
                     <a href="#" class="btn-hero">Learn More</a>
                 </div>
             </div>
         </div>
         <!-- Slide 2 -->
-        <div class="slide" style="background-image: url('assets/hero/health-banner.png');">
+        <div class="hero-slide" style="background-image: url('assets/frontend/mission-banner.avif');">
             <div class="container">
-                <div class="slide-content">
-                    <h1>Education is the Key to Freedom</h1>
-                    <p>We believe every child deserves access to quality education and opportunities.</p>
-                    <a href="#" class="btn-hero">Our Projects</a>
+                <div class="hero-content">
+                    <h1>Health & Well-being for Everyone</h1>
+                    <p>Providing essential healthcare services to those in need.</p>
+                    <a href="#" class="btn-hero">Our Programs</a>
                 </div>
             </div>
         </div>
         <!-- Slide 3 -->
-        <div class="slide" style="background-image: url('assets/hero/health-banner.png');">
-            <div class="container">
-                <div class="slide-content">
-                    <h1>Health & Wellbeing for Everyone</h1>
-                    <p>Providing essential healthcare services to underserved regions around the world.</p>
+        <div class="hero-slide" style="background-image: url('assets/hero/health-banner.png');">
+             <div class="container">
+                <div class="hero-content">
+                    <h1>Education for Every Child</h1>
+                    <p>Building a brighter future through quality education.</p>
                     <a href="#" class="btn-hero">Donate Now</a>
                 </div>
             </div>
         </div>
-
-        <!-- Navigation Buttons -->
-        <button class="prev-btn" onclick="moveSlide(-1)">&#10094;</button>
-        <button class="next-btn" onclick="moveSlide(1)">&#10095;</button>
-
-        <!-- Dots -->
-        <div class="slider-dots">
-            <span class="dot active" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
     </div>
+
+    <!-- Navigation Buttons -->
+    <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+    <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+
+    <!-- Dots -->
+    <div class="slider-dots"></div>
 </section>
 
 <script>
-    let slideIndex = 1;
-    let slideInterval;
+document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.hero-slide');
+    const dotsContainer = document.querySelector('.slider-dots');
+    const nextBtn = document.querySelector('.next-btn');
+    const prevBtn = document.querySelector('.prev-btn');
+    let currentSlide = 0;
+    const slideInterval = 5000; // 5 seconds
 
-    // Initialize slider
-    showSlides(slideIndex);
-    startAutoplay();
+    // Create dots
+    slides.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        if (index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(index));
+        dotsContainer.appendChild(dot);
+    });
 
-    function moveSlide(n) {
-        showSlides(slideIndex += n);
-        resetAutoplay();
-    }
+    const dots = document.querySelectorAll('.dot');
 
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-        resetAutoplay();
-    }
-
-    function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("slide");
-        let dots = document.getElementsByClassName("dot");
+    function goToSlide(n) {
+        slides[currentSlide].classList.remove('active');
+        dots[currentSlide].classList.remove('active');
         
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
+        currentSlide = (n + slides.length) % slides.length;
         
-        for (i = 0; i < slides.length; i++) {
-            slides[i].classList.remove("active");
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].classList.remove("active");
-        }
-        
-        slides[slideIndex-1].classList.add("active");
-        dots[slideIndex-1].classList.add("active");
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
     }
 
-    function startAutoplay() {
-        slideInterval = setInterval(function() {
-            moveSlide(1);
-        }, 5000); // Change image every 5 seconds
+    function nextSlide() {
+        goToSlide(currentSlide + 1);
     }
 
-    function resetAutoplay() {
-        clearInterval(slideInterval);
-        startAutoplay();
+    function prevSlide() {
+        goToSlide(currentSlide - 1);
     }
+
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+
+    // Auto play
+    let slideTimer = setInterval(nextSlide, slideInterval);
+
+    // Pause on hover
+    const heroSection = document.querySelector('.hero-section');
+    heroSection.addEventListener('mouseenter', () => {
+        clearInterval(slideTimer);
+    });
+
+    heroSection.addEventListener('mouseleave', () => {
+        slideTimer = setInterval(nextSlide, slideInterval);
+    });
+});
 </script>
