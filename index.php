@@ -7,5 +7,6 @@
 </head>
 <body>
     <h1>Global Foundation</h1>
+    <p>Global Foundation is a non-profit organization that works to provide education and support to underprivileged children.</p>
 </body>
 </html>
