@@ -1,7 +1,7 @@
 <section class="hero-slider">
     <div class="slider-container">
         <!-- Slide 1 -->
-        <div class="slide active" style="background-image: url('https://placehold.co/1920x800/E63946/FFFFFF?text=Empowering+Communities');">
+        <div class="slide active" style="background-image: url('assets/hero/health-banner.png');">
             <div class="container">
                 <div class="slide-content">
                     <h1>Empowering Communities, One Step at a Time</h1>
