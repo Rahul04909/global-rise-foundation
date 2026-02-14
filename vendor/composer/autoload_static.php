@@ -8,13 +8,24 @@ class ComposerStaticInit5ce13f389270716aa74fac6c4293dda4
 {
     public static $files = array (
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+        '941748b3c8cae4466c827dfb5ca9602a' => __DIR__ . '/..' . '/rmccue/requests/library/Deprecated.php',
         'db356362850385d08a5381de2638b5fd' => __DIR__ . '/..' . '/mpdf/mpdf/src/functions.php',
+        '13906c19e3d8fcd1341b24ed4d51cf72' => __DIR__ . '/..' . '/razorpay/razorpay/Deprecated.php',
     );
 
     public static $prefixLengthsPsr4 = array (
         's' => 
         array (
             'setasign\\Fpdi\\' => 14,
+        ),
+        'W' => 
+        array (
+            'WpOrg\\Requests\\' => 15,
+        ),
+        'R' => 
+        array (
+            'Razorpay\\Tests\\' => 15,
+            'Razorpay\\Api\\' => 13,
         ),
         'P' => 
         array (
@@ -38,6 +49,18 @@ class ComposerStaticInit5ce13f389270716aa74fac6c4293dda4
         'setasign\\Fpdi\\' => 
         array (
             0 => __DIR__ . '/..' . '/setasign/fpdi/src',
+        ),
+        'WpOrg\\Requests\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/rmccue/requests/src',
+        ),
+        'Razorpay\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/razorpay/razorpay/tests',
+        ),
+        'Razorpay\\Api\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/razorpay/razorpay/src',
         ),
         'Psr\\Log\\' => 
         array (
@@ -71,6 +94,7 @@ class ComposerStaticInit5ce13f389270716aa74fac6c4293dda4
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Requests' => __DIR__ . '/..' . '/rmccue/requests/library/Requests.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

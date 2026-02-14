@@ -4,13 +4,19 @@
 <section class="hero-section">
     <div class="hero-slider">
         <!-- Slide 1 -->
-        <div class="hero-slide active" style="background-image: url('assets/hero/health-banner.png');">
+        <div class="hero-slide active">
+            <img src="assets/hero/health-banner.png" alt="Health Banner" class="hero-img desktop-img">
+            <img src="assets/hero/health-banner.png" alt="Health Banner" class="hero-img mobile-img">
         </div>
         <!-- Slide 2 -->
-        <div class="hero-slide" style="background-image: url('assets/frontend/mission-banner.avif');">
+        <div class="hero-slide">
+             <img src="assets/frontend/mission-banner.avif" alt="Mission Banner" class="hero-img desktop-img">
+             <img src="assets/frontend/mission-banner.avif" alt="Mission Banner" class="hero-img mobile-img">
         </div>
         <!-- Slide 3 -->
-        <div class="hero-slide" style="background-image: url('assets/hero/health-banner.png');">
+        <div class="hero-slide">
+             <img src="assets/hero/health-banner.png" alt="Health Banner" class="hero-img desktop-img">
+             <img src="assets/hero/health-banner.png" alt="Health Banner" class="hero-img mobile-img">
         </div>
     </div>
 
