@@ -12,12 +12,14 @@
     <link rel="stylesheet" href="assets/css/mission.css">
     <link rel="stylesheet" href="assets/css/gallery.css">
     <link rel="stylesheet" href="assets/css/hero.css">
+    <link rel="stylesheet" href="assets/css/programs.css">
 </head>
 <body>
 
     <?php include 'includes/header.php'; ?>
     <?php include 'components/hero.php'; ?>
     <?php include 'components/mission.php'; ?>
+    <?php include 'components/programs.php'; ?>
     <?php include 'components/gallery.php'; ?>
 
     <?php include 'includes/footer.php'; ?>
