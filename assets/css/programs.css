@@ -1,83 +1,90 @@
 /* Programs Section Styles */
 .programs-section {
-    padding: 60px 0;
-    background-color: #f9f9f9;
+    padding: 80px 0;
+    background-color: #fcfcfc;
+    /* Slightly cleaner white/grey */
+    font-family: 'Poppins', sans-serif;
+    /* Assuming Poppins is used or falls back to sans */
 }
 
 .programs-heading {
     text-align: center;
-    font-size: 32px;
+    font-size: 36px;
     font-weight: 700;
-    color: #333;
-    margin-bottom: 50px;
-    position: relative;
+    color: #2c2c2c;
+    margin-bottom: 60px;
+    letter-spacing: -0.5px;
 }
 
 /* Featured Program (Image + Text) */
 .featured-program {
     display: flex;
-    background: #fff;
-    /* White background or transparent depending on design preference, image suggests merging with bg */
     background: transparent;
-    gap: 40px;
-    margin-bottom: 50px;
-    align-items: center;
+    gap: 0;
+    /* Removed gap for seamless look if desired, or keep small */
+    margin-bottom: 60px;
+    align-items: stretch;
+    /* Stretch to matching heights */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    /* Soft overall shadow */
+    border-radius: 12px;
+    overflow: hidden;
 }
 
 .featured-image-wrapper {
-    flex: 1;
-    overflow: hidden;
-    /* border-radius: 8px; Optional */
+    flex: 1.2;
+    /* Image takes slightly more width */
+    position: relative;
+    min-height: 400px;
 }
 
 .featured-image {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     object-fit: cover;
-    max-height: 400px;
 }
 
 .featured-content {
     flex: 1;
-    padding: 20px;
-    background-color: #f4f4f4;
-    /* Light grey bg for text area as per image hint */
-    height: 100%;
+    padding: 60px 50px;
+    background-color: #f4f6f8;
+    /* Very subtle blue-grey */
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .featured-title {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 600;
-    color: #333;
-    margin-bottom: 15px;
+    color: #1a1a1a;
+    margin-bottom: 20px;
 }
 
 .featured-desc {
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.8;
     color: #555;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .read-more-link {
-    color: #ff9800;
-    /* Orange color from image */
-    font-weight: 600;
+    color: #f7941d;
+    /* Orange adjusted */
+    font-weight: 500;
     text-decoration: none;
-    font-family: 'Brush Script MT', cursive;
-    /* Rough approximation for the script font */
-    font-size: 20px;
+    font-family: 'Brush Script MT', 'Comic Sans MS', cursive;
+    font-size: 24px;
     display: inline-flex;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
+    transition: transform 0.2s ease;
 }
 
 .read-more-link:hover {
-    text-decoration: underline;
+    transform: translateX(5px);
+    text-decoration: none;
 }
 
 /* Programs Grid (3 Cards) */
@@ -89,15 +96,20 @@
 
 .program-card {
     background: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     width: 100%;
-    max-width: 350px;
+    flex: 1;
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #f0f0f0;
 }
 
 .program-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
 }
 
 .card-image {
@@ -105,10 +117,18 @@
     height: 250px;
     object-fit: cover;
     display: block;
+    transition: transform 0.5s ease;
+}
+
+.program-card:hover .card-image {
+    transform: scale(1.05);
 }
 
 .card-content {
-    padding: 15px;
+    padding: 20px;
+    background: #fff;
+    position: relative;
+    z-index: 2;
 }
 
 .card-title {
@@ -116,18 +136,21 @@
     font-weight: 600;
     color: #333;
     margin: 0;
+    line-height: 1.4;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 992px) {
     .featured-program {
         flex-direction: column;
-        gap: 0;
     }
 
-    .featured-image-wrapper,
+    .featured-image-wrapper {
+        min-height: 300px;
+    }
+
     .featured-content {
-        width: 100%;
+        padding: 40px 30px;
     }
 
     .programs-grid {
@@ -135,8 +158,7 @@
     }
 
     .program-card {
-        max-width: 100%;
         flex: 1 1 300px;
-        /* Grow to fill, min 300px */
+        margin-bottom: 20px;
     }
 }

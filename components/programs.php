@@ -1,5 +1,5 @@
 <section class="programs-section">
-    <div class="container">
+    <div class="container" style="display: block;">
         <h2 class="programs-heading">Our Programs</h2>
 
         <!-- Featured Program -->
