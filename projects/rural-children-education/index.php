@@ -17,327 +17,263 @@ define('BASE_URL', '../../');
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/style.css">
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/footer.css">
     
-    <!-- Premium & High-End Design Style -->
+    <!-- Unique Professional Design for Rural Education (Mirrors Disability Pattern) -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap');
-
         :root {
-            --rural-deep: #1B4332; /* Deep Jungle Green */
-            --rural-mid: #2D6A4F; /* Forest Green */
-            --rural-gold: #FFB703; /* Saffron Gold */
-            --rural-cream: #FFFBED; /* Warm Cream */
-            --rural-accent: #FB8500; /* Warm Orange */
-            --text-main: #081C15;
-            --glass: rgba(255, 251, 237, 0.85);
-            --transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            --rural-primary: #1B4332; /* Deep Jungle Green */
+            --rural-secondary: #D8F3DC; /* Forest Mint */
+            --rural-gold: #FFB703; /* Saffron Gold Accent */
+            --rural-dark: #081C15;
+            --rural-light: #F7FFF7;
+            --white: #ffffff;
         }
 
-        body {
-            font-family: 'Outfit', sans-serif;
-            color: var(--text-main);
-            background-color: var(--white);
-            overflow-x: hidden;
-        }
-
-        /* --- 1. PREMIUM HERO --- */
-        .premium-hero {
-            height: 95vh;
+        /* Hero Section */
+        .rural-hero {
+            height: 90vh;
             background: linear-gradient(rgba(27, 67, 50, 0.85), rgba(27, 67, 50, 0.4)), url('<?php echo BASE_URL; ?>assets/frontend/rural-children-education.jpg');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
             display: flex;
             align-items: center;
-            position: relative;
+            color: white;
+            clip-path: ellipse(150% 100% at 50% 0%);
         }
-        .hero-glass-card {
-            background: var(--glass);
-            backdrop-filter: blur(20px);
-            padding: 60px;
-            border-radius: 40px;
-            max-width: 850px;
-            box-shadow: 0 40px 100px rgba(0,0,0,0.15);
-            border: 1px solid rgba(255,255,255,0.4);
-            margin-left: 5%;
-            animation: slideIn 1.2s ease-out;
-        }
-        @keyframes slideIn { from { opacity: 0; transform: translateX(-50px); } to { opacity: 1; transform: translateX(0); } }
-        
-        .premium-hero h1 {
-            font-size: 5.5rem;
-            font-weight: 900;
-            line-height: 1;
-            color: var(--rural-deep);
+        .rural-hero h1 {
+            font-size: 4.5rem;
+            font-weight: 800;
             margin-bottom: 25px;
+            max-width: 900px;
+            line-height: 1.1;
         }
-        .premium-hero h1 span {
-            color: var(--rural-accent);
-            display: block;
-            font-size: 0.7em;
-            letter-spacing: 5px;
-        }
-        .premium-hero p {
+        .rural-hero h1 span { color: var(--rural-gold); }
+        .rural-hero p {
             font-size: 1.4rem;
-            color: #444;
-            margin-bottom: 45px;
+            max-width: 650px;
+            margin-bottom: 40px;
             line-height: 1.6;
-            max-width: 600px;
+            font-weight: 300;
+            opacity: 0.9;
         }
 
-        /* --- 2. VISIONARY MANDATE (Asymmetrical) --- */
-        .vision-section {
-            padding: 150px 0;
-            background: var(--rural-cream);
-            position: relative;
+        .section-padding { padding: 120px 0; }
+        .section-header { margin-bottom: 80px; }
+        .section-header h2 {
+            font-size: 3.2rem;
+            color: var(--rural-dark);
+            margin-bottom: 20px;
+            font-weight: 800;
         }
-        .vision-flex {
+        .section-header h2 span { color: var(--rural-primary); }
+        .section-header .underline {
+            width: 100px;
+            height: 6px;
+            background: var(--rural-gold);
+            display: block;
+            border-radius: 10px;
+        }
+
+        /* Pillars Grid */
+        .pillar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+        .pillar-card {
+            background: var(--white);
+            padding: 60px 45px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #f0f0f0;
+        }
+        .pillar-card:hover {
+            box-shadow: 0 25px 60px rgba(27, 67, 50, 0.12);
+            transform: translateY(-10px);
+        }
+        .pillar-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 6px; height: 0;
+            background: var(--rural-primary);
+            transition: height 0.4s ease;
+        }
+        .pillar-card:hover::before { height: 100%; }
+        .pillar-icon {
+            font-size: 3.5rem;
+            color: var(--rural-primary);
+            margin-bottom: 30px;
+            display: block;
+        }
+        .pillar-card h3 {
+            font-size: 1.8rem;
+            color: var(--rural-dark);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        /* Split Info Section */
+        .info-split {
             display: flex;
             align-items: center;
             gap: 120px;
+            margin-bottom: 150px;
         }
-        .vision-images {
-            flex: 1;
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            position: relative;
-        }
-        .img-main {
-            grid-column: 1 / 10;
-            border-radius: 50px;
-            box-shadow: 30px 30px 80px rgba(27, 67, 50, 0.1);
+        .info-content { flex: 1.2; }
+        .info-image { flex: 1; position: relative; }
+        .info-image img {
+            width: 100%;
+            border-radius: 15px;
             z-index: 2;
-        }
-        .img-sub {
-            grid-column: 7 / 13;
-            margin-top: -40%;
-            border-radius: 40px;
-            border: 10px solid var(--white);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            z-index: 3;
-        }
-        .vision-content { flex: 1.2; }
-        .vision-tag {
-            background: var(--rural-gold);
-            padding: 8px 25px;
-            border-radius: 100px;
-            font-weight: 800;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 30px;
-            display: inline-block;
-        }
-
-        /* --- 3. CRISIS DATA CARDS --- */
-        .crisis-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 20px;
-        }
-        .crisis-card {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 30px;
-            border-top: 10px solid var(--rural-deep);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.03);
-        }
-        .crisis-card h4 { font-size: 3rem; color: var(--rural-accent); font-weight: 900; margin-bottom: 10px; }
-
-        /* --- 4. PILLAR MODULES (Interactive) --- */
-        .pillars-section { padding: 150px 0; }
-        .pillar-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 25px;
-        }
-        .pillar-premium-card {
-            background: var(--white);
-            padding: 80px 50px;
-            border-radius: 50px;
-            text-align: center;
-            transition: var(--transition);
-            border: 1px solid #f0f0f0;
             position: relative;
-            overflow: hidden;
-        }
-        .pillar-premium-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 0;
-            background: var(--rural-deep);
-            z-index: 1;
-            transition: var(--transition);
-        }
-        .pillar-premium-card:hover { transform: translateY(-20px); box-shadow: 0 40px 80px rgba(27, 67, 50, 0.15); }
-        .pillar-premium-card:hover::before { height: 10px; }
-        .pillar-premium-card i {
-            font-size: 4rem;
-            color: var(--rural-gold);
-            margin-bottom: 35px;
-            display: block;
-            position: relative;
-            z-index: 2;
-        }
-        .pillar-premium-card h3 { font-size: 2rem; color: var(--rural-deep); position: relative; z-index: 2; margin-bottom: 20px; }
-        .pillar-premium-card p { position: relative; z-index: 2; color: #666; font-size: 1.1rem; }
-
-        /* --- 5. NUTRITION SOFT-FOCUS --- */
-        .nutrition-wrap {
-            background: linear-gradient(135deg, var(--white), var(--rural-cream));
-            padding: 150px 0;
-            border-radius: 200px 0 200px 0;
+            box-shadow: 30px 30px 0 var(--rural-secondary);
         }
 
-        /* --- 6. IMPACT RIBBON --- */
-        .impact-ribbon {
-            background: var(--rural-deep);
+        /* Dark Impact Box (Tech spotlight) */
+        .tech-box {
+            background: var(--rural-primary);
             color: white;
-            padding: 100px 0;
+            padding: 100px 80px;
+            border-radius: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 80px;
             position: relative;
             overflow: hidden;
         }
-        .impact-ribbon::after {
-            content: 'GLOBAL RISE';
-            position: absolute;
-            font-size: 20rem;
-            font-weight: 900;
-            opacity: 0.03;
-            bottom: -50px;
-            right: -20px;
-            white-space: nowrap;
+        .tech-text { flex: 1.5; position: relative; z-index: 2; }
+        .tech-items { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; position: relative; z-index: 2; }
+        .tech-item {
+            background: rgba(255,255,255,0.08);
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+            transition: var(--transition);
         }
-        .ribbon-stats {
+        .tech-item:hover { background: rgba(255,255,255,0.15); transform: scale(1.05); }
+
+        /* Stats Section */
+        .stats-ribbon {
+            background: var(--rural-light);
+            padding: 80px 0;
+            border-radius: 150px 0 150px 0;
+            border: 1px solid #e9f5db;
+        }
+        .stats-flex {
             display: flex;
             justify-content: space-around;
             text-align: center;
-            position: relative;
-            z-index: 2;
+            flex-wrap: wrap;
+            gap: 40px;
         }
-        .ribbon-item h2 { font-size: 5rem; color: var(--rural-gold); font-weight: 900; margin-bottom: 0; }
-        .ribbon-item p { font-size: 1.2rem; letter-spacing: 3px; text-transform: uppercase; color: var(--rural-cream); opacity: 0.8; }
+        .stat-item h4 { font-size: 4rem; color: var(--rural-primary); margin-bottom: 10px; font-weight: 900; }
+        .stat-item p { color: #555; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; }
 
-        /* --- 7. MAGAZINE STYLE STORY --- */
-        .magazine-story {
+        /* Success Story Module */
+        .story-section {
+            background: var(--white);
             padding: 150px 0;
         }
-        .story-hero-box {
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            background: var(--white);
-            border-radius: 60px;
-            overflow: hidden;
-            box-shadow: 0 50px 100px rgba(0,0,0,0.08);
-        }
-        .story-image-canvas {
-            background: url('<?php echo BASE_URL; ?>assets/frontend/Girl-Child-Education.jpg') center/cover;
-            min-height: 700px;
-        }
-        .story-text-canvas {
-            padding: 100px;
+        .story-card {
+            background: #fdfdfd;
+            border-radius: 40px;
+            padding: 80px;
             display: flex;
-            flex-direction: column;
+            gap: 80px;
+            align-items: center;
+            border: 1px solid #f0f0f0;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.03);
+        }
+        .story-img { flex: 1; }
+        .story-img img { width: 100%; border-radius: 50%; border: 15px solid var(--rural-secondary); }
+        .story-txt { flex: 1.8; }
+        .story-txt h2 { font-size: 2.8rem; color: var(--rural-primary); margin-bottom: 25px; font-weight: 800; }
+        .story-txt p { font-size: 1.4rem; line-height: 1.8; color: #444; font-style: italic; font-weight: 300; }
+
+        /* Step Grid (How to Help) */
+        .step-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        .step-item { 
+            text-align: center; 
+            padding: 40px; 
+            background: white; 
+            border-radius: 20px;
+            transition: var(--transition);
+        }
+        .step-item:hover { transform: translateY(-10px); }
+        .step-circle {
+            width: 100px; height: 100px;
+            background: var(--rural-gold);
+            color: var(--rural-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
             justify-content: center;
-        }
-        .story-text-canvas blockquote {
-            font-size: 2.8rem;
-            font-weight: 800;
-            color: var(--rural-deep);
-            line-height: 1.2;
-            margin-bottom: 40px;
-            position: relative;
-        }
-        .story-text-canvas blockquote::before {
-            content: '“';
-            font-size: 8rem;
-            color: var(--rural-gold);
-            position: absolute;
-            top: -60px; left: -40px;
-            opacity: 0.5;
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin: 0 auto 35px;
+            box-shadow: 0 10px 20px rgba(255, 183, 3, 0.3);
         }
 
-        /* --- 8. PREMIUM DONATION CARDS --- */
-        .donation-grid {
+        /* Feature Large Cards (Gramin Labs) */
+        .lab-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
             gap: 30px;
         }
-        .tier-card {
-            background: var(--white);
-            padding: 60px 45px;
-            border-radius: 40px;
-            text-align: center;
-            border: 1px solid #f0f0f0;
-            transition: var(--transition);
+        .lab-card {
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            border-radius: 30px;
+            display: flex;
+            align-items: flex-end;
+            padding: 40px;
+            overflow: hidden;
+            position: relative;
         }
-        .tier-card.featured {
-            background: var(--rural-deep);
+        .lab-card::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to top, rgba(8, 28, 21, 0.9), transparent);
+        }
+        .lab-info {
+            position: relative;
+            z-index: 2;
             color: white;
-            transform: scale(1.05);
-            border: none;
         }
-        .tier-card h3 { font-size: 1.8rem; margin-bottom: 25px; }
-        .tier-card.featured h3 { color: var(--rural-gold); }
-        .tier-price { font-size: 3.5rem; font-weight: 900; margin-bottom: 30px; display: block; }
-        .tier-card.featured .tier-price { color: var(--white); }
+        .lab-info h4 { font-size: 2rem; margin-bottom: 10px; font-weight: 800; }
 
-        /* --- 9. BUTTONS --- */
-        .btn-premium {
-            background: var(--rural-deep);
+        /* Buttons */
+        .btn-rural {
+            background: var(--rural-primary);
             color: white;
-            padding: 22px 60px;
+            padding: 22px 55px;
             border-radius: 100px;
             text-decoration: none;
-            font-weight: 900;
+            font-weight: 800;
             display: inline-block;
-            transition: var(--transition);
+            transition: all 0.4s ease;
             text-transform: uppercase;
             letter-spacing: 2px;
-            border: none;
             font-size: 0.9rem;
         }
-        .btn-premium:hover {
-            transform: translateY(-5px);
-            background: var(--rural-accent);
-            box-shadow: 0 20px 40px rgba(251, 133, 0, 0.3);
-        }
-        .btn-premium-outline {
-            background: transparent;
-            color: var(--rural-deep);
-            border: 2px solid var(--rural-deep);
-            padding: 20px 58px;
-            border-radius: 100px;
-            text-decoration: none;
-            font-weight: 900;
-            display: inline-block;
-            transition: var(--transition);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        .btn-premium-outline:hover { background: var(--rural-deep); color: white; }
-
-        .btn-gold {
-            background: var(--rural-gold);
-            color: var(--rural-deep);
-            padding: 22px 60px;
-            border-radius: 100px;
-            text-decoration: none;
-            font-weight: 900;
-            font-size: 1rem;
-            transition: var(--transition);
-        }
-        .btn-gold:hover { transform: scale(1.05); box-shadow: 0 15px 30px rgba(255, 183, 3, 0.4); }
+        .btn-rural:hover { background: var(--rural-dark); transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
 
         @media (max-width: 992px) {
-            .premium-hero h1 { font-size: 3.5rem; }
-            .hero-glass-card { margin-left: 0; padding: 40px; }
-            .vision-flex { flex-direction: column; }
-            .crisis-grid { grid-template-columns: 1fr; }
-            .pillar-grid, .donation-grid { grid-template-columns: 1fr; }
-            .ribbon-stats { flex-direction: column; gap: 40px; }
-            .story-hero-box { grid-template-columns: 1fr; }
-            .story-text-canvas { padding: 40px; }
-            .story-text-canvas blockquote { font-size: 1.8rem; }
+            .rural-hero h1 { font-size: 3rem; }
+            .info-split { flex-direction: column; gap: 60px; margin-bottom: 100px; }
+            .tech-box { flex-direction: column; padding: 60px 40px; }
+            .story-card { flex-direction: column; padding: 40px; text-align: center; }
+            .lab-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -345,284 +281,263 @@ define('BASE_URL', '../../');
 
     <?php include(BASE_URL . 'includes/header.php'); ?>
 
-    <!-- 1. PREMIUM HERO SECTION -->
-    <section class="premium-hero">
+    <!-- 1. HERO SECTION -->
+    <section class="rural-hero">
         <div class="container" style="display: block;">
-            <div class="hero-glass-card">
-                <h1><span>RURAL INDIA</span> Nurturing <br>The Future.</h1>
-                <p>We are reimagining village education through a fusion of traditional values and modern technological excellence.</p>
-                <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-                    <a href="#sponsor" class="btn-premium">Partner with a Child</a>
-                    <a href="#vision" class="btn-premium-outline">Explore Our Vision</a>
-                </div>
+            <h1>Cultivating <span>Brilliance</span> in Rural India</h1>
+            <p>We provide world-class education, digital literacy, and holistic support to children in marginalized village communities, turning remote schools into centers of excellence.</p>
+            <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                <a href="#sponsor" class="btn-rural" style="background: var(--rural-gold); color: var(--rural-primary);">Empower a Child</a>
+                <a href="#vision" class="btn-rural" style="background:transparent; border: 2px solid white;">Our Learning Mandate</a>
             </div>
         </div>
     </section>
 
-    <!-- 2. THE CRISIS DATA (Direct transition for impact) -->
-    <section class="section-padding" id="vision">
+    <!-- 2. VISIONARY MANDATE -->
+    <section id="vision" class="section-padding">
         <div class="container" style="display: block;">
-            <div class="section-header">
-                <h2 style="font-size: 1.5rem; letter-spacing: 5px; color: var(--rural-accent); text-transform: uppercase;">The Challenge</h2>
-                <h3 style="font-size: 3.5rem; color: var(--rural-deep); font-weight: 900; margin-top: 10px;">Why We Intervene</h3>
-            </div>
-            <div class="crisis-grid">
-                <div class="crisis-card">
-                    <h4>70%</h4>
-                    <p style="font-weight: 800; text-transform: uppercase; font-size: 0.9rem; color: #888;">Literacy Gap</p>
-                    <p style="margin-top: 15px; color: #555;">Gap in functional literacy between urban centers and remote villages.</p>
-                </div>
-                <div class="crisis-card" style="border-top-color: var(--rural-gold);">
-                    <h4>55%</h4>
-                    <p style="font-weight: 800; text-transform: uppercase; font-size: 0.9rem; color: #888;">Digital Divide</p>
-                    <p style="margin-top: 15px; color: #555;">Rural students lack access to basic computer and internet learning tools.</p>
-                </div>
-                <div class="crisis-card" style="border-top-color: var(--rural-accent);">
-                    <h4>40%</h4>
-                    <p style="font-weight: 800; text-transform: uppercase; font-size: 0.9rem; color: #888;">Dropout Rate</p>
-                    <p style="margin-top: 15px; color: #555;">Estimated drop-out rate after primary education in marginalized rural hubs.</p>
-                </div>
+            <div style="max-width: 950px; margin: 0 auto; text-align: center;">
+                <h2 style="font-size: 3rem; color: var(--rural-primary); margin-bottom: 35px; font-weight: 800;">The Roots of <span>Transformation</span></h2>
+                <p style="font-size: 1.35rem; line-height: 1.9; color: #444; font-weight: 300;">
+                    At Global Rise, we believe that geography should not determine a child's destiny. Our rural education model integrates conceptual learning with practical innovation, ensuring that every village child has the tools to dream as big as their urban counterparts.
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- 4. IMPACT RIBBON (Interactive Stats) -->
-    <section class="impact-ribbon">
+    <!-- 3. THE RURAL REALITY (Challenge) -->
+    <section class="section-padding" style="background: #fafafa;">
         <div class="container" style="display: block;">
-            <div class="ribbon-stats">
-                <div class="ribbon-item">
-                    <h2>200+</h2>
-                    <p>Villages Served</p>
-                </div>
-                <div class="ribbon-item">
-                    <h2>50k+</h2>
-                    <p>Children Enrolled</p>
-                </div>
-                <div class="ribbon-item">
-                    <h2>500+</h2>
-                    <p>Smart Schools</p>
-                </div>
-                <div class="ribbon-item">
-                    <h2>1M+</h2>
-                    <p>Books Distributed</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. PILLAR MODULES (Interactive Cards) -->
-    <section class="pillars-section bg-fresh">
-        <div class="container" style="display: block;">
-            <div class="section-header">
-                <h2 style="font-size: 3.5rem; color: var(--rural-deep); font-weight: 900;">The Four <span>Pillars</span> of Excellence.</h2>
-            </div>
-            <div class="pillar-grid" style="margin-top: 50px;">
-                <div class="pillar-premium-card">
-                    <i class="fas fa-graduation-cap"></i>
-                    <h3>Smart Curriculum</h3>
-                    <p>Context-aware pedagogy that makes global concepts easy to understand for village children.</p>
-                </div>
-                <div class="pillar-premium-card">
-                    <i class="fas fa-laptop-code"></i>
-                    <h3>Digital Literacy</h3>
-                    <p>Hands-on coding and computer workshops to prepare them for the modern global economy.</p>
-                </div>
-                <div class="pillar-premium-card">
-                    <i class="fas fa-heart-pulse"></i>
-                    <h3>Child Wellbeing</h3>
-                    <p>Focusing on nutritional health, mental wellness, and regular medical checkups at school.</p>
-                </div>
-                <div class="pillar-premium-card">
-                    <i class="fas fa-people-roof"></i>
-                    <h3>Community Hub</h3>
-                    <p>Schools that act as community centers for night classes and vocational training for adults.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. NUTRITION MODULE -->
-    <section class="nutrition-wrap">
-        <div class="container" style="display: block;">
-            <div class="vision-flex" style="flex-direction: row-reverse;">
-                <div class="vision-images">
-                    <img src="<?php echo BASE_URL; ?>assets/frontend/Girl-Child-Education.jpg" alt="Healthy Student" class="img-main">
-                </div>
-                <div class="vision-content">
-                    <span class="vision-tag" style="background:#e9f5db;">Nutritional Shield</span>
-                    <h2 style="font-size: 3rem; color: var(--rural-deep); font-weight: 900; margin-bottom: 25px;">Feed a Mind, <br>Change a Life.</h2>
-                    <p style="font-size: 1.2rem; color: #555; line-height: 1.8; margin-bottom: 30px;">
-                        Healthy bodies lead to sharp minds. Our "Poshan" program ensures high-protein, hygienic mid-day meals that reduce absenteeism and improve cognitive performance by 40%.
+            <div class="info-split">
+                <div class="info-content">
+                    <div class="section-header">
+                        <h2>Closing the <span>Educational Divide</span></h2>
+                        <span class="underline"></span>
+                    </div>
+                    <p style="color: #666; font-size: 1.2rem; line-height: 1.8; margin-bottom: 40px;">
+                        Despite India's rapid growth, thousands of rural primary schools lack basic teaching aids, qualified staff, and digital connectivity. This gap forces millions of talented minds to drop out before they can realize their potential.
                     </p>
-                    <div style="background: white; padding: 40px; border-radius: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.03);">
-                        <div style="display: flex; gap: 20px; align-items: center;">
-                            <div style="width: 60px; height: 60px; background: var(--rural-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--rural-deep); font-size: 1.5rem;"><i class="fas fa-bowl-food"></i></div>
-                            <div>
-                                <h4 style="margin-bottom: 5px;">Hygienic Kitchens</h4>
-                                <p style="font-size: 0.9rem; color: #777;">FSSAI compliant community kitchens in every cluster.</p>
-                            </div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px;">
+                        <div>
+                            <h4 style="color: var(--rural-primary); margin-bottom: 12px; font-weight: 800;"><i class="fas fa-school-circle-exclamation"></i> Decaying Infra</h4>
+                            <p style="font-size: 1rem; color: #777;">Over 60% of rural schools lack proper laboratory facilities or smart tools.</p>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--rural-primary); margin-bottom: 12px; font-weight: 800;"><i class="fas fa-user-xmark"></i> High Attrition</h4>
+                            <p style="font-size: 1rem; color: #777;">Distance and poverty lead to high dropout rates among village girls and boys.</p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 7. MAGAZINE STORY SPOTLIGHT -->
-    <section class="magazine-story">
-        <div class="container" style="display: block;">
-            <div class="story-hero-box">
-                <div class="story-image-canvas"></div>
-                <div class="story-text-canvas">
-                    <span style="color: var(--rural-accent); font-weight: 900; text-transform: uppercase; letter-spacing: 5px; margin-bottom: 20px; display: block;">The Alumni Chronicles</span>
-                    <blockquote>"Global Rise didn't just give me books; they gave me a vision to see beyond the fields of my village."</blockquote>
-                    <p style="font-size: 1.1rem; color: #555; line-height: 1.8; margin-bottom: 40px;">Arjun Singh, once a migrant laborer's son, is now pursuing his Bachelor's in Software Engineering thanks to the Foundation's Digital Lab scholarship.</p>
-                    <div>
-                        <a href="#" class="btn-premium">Read His Full Journey</a>
-                    </div>
+                <div class="info-image">
+                    <img src="<?php echo BASE_URL; ?>assets/frontend/rural-about.jpg" alt="Rural student studying">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 8. VOCATIONAL & SKILLS -->
-    <section class="section-padding bg-soft">
-        <div class="container" style="display: block;">
-            <div class="vision-flex">
-                 <div class="vision-content">
-                    <span class="vision-tag">Skill Integration</span>
-                    <h2 style="font-size: 3rem; color: var(--rural-deep); font-weight: 800;">Learning by <span>Doing</span>.</h2>
-                    <p style="color: #666; font-size: 1.2rem; line-height: 1.8; margin-top: 30px;">
-                        Our "Gramin Skill Labs" teach students more than just theory. From sustainable agriculture techniques to basic robotics, we ensure children are prepared for both the farm and the factory of the future.
-                    </p>
-                    <div style="display: flex; gap: 40px; margin-top: 50px;">
-                         <div style="text-align: center;">
-                            <div style="font-size: 2.5rem; color: var(--rural-mid);"><i class="fas fa-seedling"></i></div>
-                            <h5 style="margin-top: 10px;">Agri-Tech</h5>
-                         </div>
-                         <div style="text-align: center;">
-                            <div style="font-size: 2.5rem; color: var(--rural-mid);"><i class="fas fa-screwdriver-wrench"></i></div>
-                            <h5 style="margin-top: 10px;">Mechanics</h5>
-                         </div>
-                         <div style="text-align: center;">
-                            <div style="font-size: 2.5rem; color: var(--rural-mid);"><i class="fas fa-code"></i></div>
-                            <h5 style="margin-top: 10px;">Coding</h5>
-                         </div>
-                    </div>
-                 </div>
-                 <div class="vision-images" style="display: block;">
-                    <img src="<?php echo BASE_URL; ?>assets/frontend/disaster-management.jpg" alt="Skills" style="width: 100%; border-radius: 40px; transform: rotate(3deg); box-shadow: 0 40px 80px rgba(0,0,0,0.1);">
-                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 9. PREMIUM DONATION TIERS -->
-    <section id="sponsor" class="section-padding" style="background: #fdfdfd;">
-        <div class="container" style="display: block;">
-            <div class="section-header">
-                <h2 style="font-size: 3.5rem; color: var(--rural-deep); font-weight: 900;">Empower a <span>Village</span> Child.</h2>
-                <p style="max-width: 650px; margin: 20px auto 0; color: #777;">Investing in a child's education is the highest ROI for humanity. Choose your sponsorship tier.</p>
-            </div>
-            <div class="donation-grid" style="margin-top: 60px;">
-                <div class="tier-card">
-                    <h3>Basic Learning Kit</h3>
-                    <p>Covers books, uniform, and a basic health insurance for one year.</p>
-                    <span class="tier-price">₹5,000</span>
-                    <a href="#" class="btn-premium-outline" style="width: 100%;">Sponsor Now</a>
-                </div>
-                <div class="tier-card featured">
-                    <h3>The Scholar Shield</h3>
-                    <p>Full year education, digital lab access, and 365 days of mid-day meals.</p>
-                    <span class="tier-price">₹12,500</span>
-                    <a href="#" class="btn-gold" style="width: 100%;">Adopt a Student</a>
-                </div>
-                <div class="tier-card">
-                    <h3>Village School Hub</h3>
-                    <p>Operational support for an entire classroom cluster for one month.</p>
-                    <span class="tier-price">₹50,000</span>
-                    <a href="#" class="btn-premium-outline" style="width: 100%;">Sponsor Hub</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 10. SCHOOL MANAGEMENT COUNCILS -->
-    <section class="section-padding" style="background: var(--rural-cream);">
-        <div class="container" style="display: block;">
-            <div class="section-header">
-                <h2 style="font-size: 3.5rem; color: var(--rural-deep); font-weight: 900;">Grassroots <span>Governance</span></h2>
-                <p style="max-width: 800px; margin: 20px auto 0; line-height: 1.8; color: #555;">Our success is based on local ownership. Each school is managed by a council of village elders, parents, and teachers, ensuring 100% accountability and cultural relevance.</p>
-            </div>
-            
-            <div class="donation-grid" style="margin-top: 60px;">
-                 <div style="padding: 50px; background: white; border-radius: 40px; box-shadow: 0 20px 50px rgba(0,0,0,0.05); text-align: center; border-bottom: 8px solid var(--rural-gold);">
-                    <div style="font-size: 3rem; color: var(--rural-deep); margin-bottom: 25px;"><i class="fas fa-handshake-angle"></i></div>
-                    <h4 style="font-size: 1.5rem; color: var(--rural-deep); margin-bottom: 15px;">Local Ownership</h4>
-                    <p style="color: #666;">Empowering village councils to lead the transformation journey.</p>
-                 </div>
-                 <div style="padding: 50px; background: white; border-radius: 40px; box-shadow: 0 20px 50px rgba(0,0,0,0.05); text-align: center; border-bottom: 8px solid var(--rural-accent);">
-                    <div style="font-size: 3rem; color: var(--rural-deep); margin-bottom: 25px;"><i class="fas fa-file-invoice-dollar"></i></div>
-                    <h4 style="font-size: 1.5rem; color: var(--rural-deep); margin-bottom: 15px;">Transparent Audits</h4>
-                    <p style="color: #666;">Monthly community-led reviews ensure 100% fiscal transparency.</p>
-                 </div>
-                 <div style="padding: 50px; background: white; border-radius: 40px; box-shadow: 0 20px 50px rgba(0,0,0,0.05); text-align: center; border-bottom: 8px solid var(--rural-mid);">
-                    <div style="font-size: 3rem; color: var(--rural-deep); margin-bottom: 25px;"><i class="fas fa-earth-asia"></i></div>
-                    <h4 style="font-size: 1.5rem; color: var(--rural-deep); margin-bottom: 15px;">Cultural Fusion</h4>
-                    <p style="color: #666;">Curriculums that respect local traditions and village ecosystems.</p>
-                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 11. CORPORATE PARTNERSHIPS -->
+    <!-- 4. CORE EDUCATION PILLARS -->
     <section class="section-padding">
         <div class="container" style="display: block;">
-            <div style="background: var(--rural-deep); padding: 100px 80px; border-radius: 60px; text-align: center; position: relative; overflow: hidden;">
-                 <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('<?php echo BASE_URL; ?>assets/frontend/rural-children-education.jpg') center/cover; opacity: 0.15;"></div>
-                 <div style="position: relative; z-index: 2;">
-                    <h2 style="font-size: 3.5rem; color: var(--rural-gold); font-weight: 900; margin-bottom: 20px;">CSR for <span>Rural Bharat</span></h2>
-                    <p style="max-width: 750px; margin: 0 auto 50px; color: var(--rural-cream); font-size: 1.4rem; opacity: 0.9; line-height: 1.6;">Scale your social impact by adopting an entire block or district for educational transformation. Together, we can redefine rural landscapes.</p>
-                    <div style="display: flex; gap: 30px; justify-content: center; flex-wrap: wrap;">
-                       <a href="#" class="btn-gold" style="padding: 22px 60px;">Inquire Corporate Plan</a>
-                       <a href="#" class="btn-premium-outline" style="border-color: white; color: white;">Volunteer at a School</a>
-                    </div>
-                 </div>
+            <div class="section-header" style="text-align: center;">
+                <h2>Core Intervention <span>Pillars</span></h2>
+                <p style="max-width: 750px; margin: 25px auto 0; font-size: 1.1rem; color: #666;">Our holistic strategy targets the classroom, the teacher, and the community to create a sustainable ecosystem of growth.</p>
+            </div>
+            
+            <div class="pillar-grid">
+                <div class="pillar-card">
+                    <i class="fas fa-book-open-reader pillar-icon"></i>
+                    <h3>Smart Curriculum</h3>
+                    <p>Implementing activity-based conceptual learning that replaces rote-memorization with deep understanding.</p>
+                </div>
+                <div class="pillar-card">
+                    <i class="fas fa-chalkboard-user pillar-icon"></i>
+                    <h3>Teacher Mentorship</h3>
+                    <p>Empowering local village teachers with modern pedagogy training and child psychology workshops.</p>
+                </div>
+                <div class="pillar-card">
+                    <i class="fas fa-vial-circle-check pillar-icon"></i>
+                    <h3>Mobile STEM Labs</h3>
+                    <p>Bringing practical science experiments to the schools through fully-equipped mobile laboratory vans.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- 12. FINAL CTA -->
-    <section style="background: var(--rural-deep); padding: 120px 0; text-align: center; color: white; border-radius: 120px 120px 0 0;">
+    <!-- 5. E-LEARNING HIGH IMPACT BOX -->
+    <section class="section-padding" style="background: var(--white);">
         <div class="container" style="display: block;">
-            <h2 style="font-size: 4.5rem; font-weight: 900; margin-bottom: 30px; line-height: 1;">Be the <span>Sun</span> that <br>Nurtures the Seed.</h2>
-            <p style="font-size: 1.5rem; margin-bottom: 60px; opacity: 0.9; font-weight: 300;">Your support defines the legacy of rural India's next generation.</p>
-            <a href="#" class="btn-gold" style="font-size: 1.3rem; padding: 25px 80px;">Sponsor an Education Journey</a>
+            <div class="tech-box">
+                <div class="tech-text">
+                    <h2 style="font-size: 3.2rem; margin-bottom: 30px; font-weight: 900; line-height: 1.1;">The Digital <span>Bharat</span> Hub</h2>
+                    <p style="font-size: 1.2rem; opacity: 0.9; line-height: 1.8; margin-bottom: 40px;">
+                        We are eliminating the digital divide by installing "Smart Hubs" in remote village clusters. These hubs provide high-speed internet and solar-powered tablets to ensure no child is left behind in the AI era.
+                    </p>
+                    <a href="#sponsor" class="btn-rural" style="background: var(--rural-gold); color: var(--rural-primary);">Sponsor a Digital Hub</a>
+                </div>
+                <div class="tech-items">
+                    <div class="tech-item">
+                        <i class="fas fa-tablet-screen-button" style="font-size: 2.5rem; margin-bottom: 15px; color: var(--rural-gold);"></i>
+                        <h5 style="font-weight: 800;">e-Learning</h5>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-solar-panel" style="font-size: 2.5rem; margin-bottom: 15px; color: var(--rural-gold);"></i>
+                        <h5 style="font-weight: 800;">Solar Power</h5>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-wifi" style="font-size: 2.5rem; margin-bottom: 15px; color: var(--rural-gold);"></i>
+                        <h5 style="font-weight: 800;">Satellite Net</h5>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-user-graduate" style="font-size: 2.5rem; margin-bottom: 15px; color: var(--rural-gold);"></i>
+                        <h5 style="font-weight: 800;">Adult Lit</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. IMPACT STATS BANNER -->
+    <section class="stats-ribbon">
+        <div class="container" style="display: block;">
+             <div class="stats-flex">
+                <div class="stat-item">
+                    <h4>200+</h4>
+                    <p>Schools Adopted</p>
+                </div>
+                <div class="stat-item">
+                    <h4>45k+</h4>
+                    <p>Active Students</p>
+                </div>
+                <div class="stat-item">
+                    <h4>85%</h4>
+                    <p>Pass Percentage</p>
+                </div>
+                <div class="stat-item">
+                    <h4>1.5M</h4>
+                    <p>Meals Served</p>
+                </div>
+             </div>
+        </div>
+    </section>
+
+    <!-- 7. SMC GOVERNANCE (Split Reverse) -->
+    <section class="section-padding">
+        <div class="container" style="display: block;">
+            <div class="info-split" style="flex-direction: row-reverse;">
+                <div class="info-content">
+                    <h2 style="font-size: 3rem; color: var(--rural-primary); font-weight: 800; margin-bottom: 30px;">Grassroots <span>Governance</span></h2>
+                    <p style="color: #555; font-size: 1.15rem; line-height: 1.8;">
+                        Authentic transformation only happens when the community takes ownership. Our School Management Committees (SMCs) empower village elders and parents to co-manage the educational journey of their children.
+                    </p>
+                    <ul style="list-style: none; margin-top: 40px;">
+                        <li style="margin-bottom: 20px; font-weight: 700; color: #444;"><i class="fas fa-circle-check" style="color: var(--rural-primary); margin-right: 15px;"></i> Monthly Community Transparency Audits</li>
+                        <li style="margin-bottom: 20px; font-weight: 700; color: #444;"><i class="fas fa-circle-check" style="color: var(--rural-primary); margin-right: 15px;"></i> Parent-Teacher Joint Development Plans</li>
+                        <li style="margin-bottom: 20px; font-weight: 700; color: #444;"><i class="fas fa-circle-check" style="color: var(--rural-primary); margin-right: 15px;"></i> Cultural Fusion Curriculum Design</li>
+                    </ul>
+                </div>
+                <div class="info-image">
+                    <img src="<?php echo BASE_URL; ?>assets/frontend/educating-slum-children.jpg" alt="Community governance meeting" style="box-shadow: -30px 30px 0 var(--rural-secondary);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. SUCCESS STORY -->
+    <section class="story-section bg-light" style="background: var(--rural-light);">
+        <div class="container" style="display: block;">
+            <div class="section-header" style="text-align: center;">
+                <h2 style="font-size: 3rem; font-weight: 800;">Voice of <span>Resilience</span></h2>
+            </div>
+            <div class="story-card">
+                <div class="story-img">
+                    <img src="<?php echo BASE_URL; ?>assets/frontend/rural-about.jpg" alt="Alumni Arjun">
+                </div>
+                <div class="story-txt">
+                    <i class="fas fa-quote-left" style="font-size: 4rem; color: var(--rural-secondary); margin-bottom: 35px; display: block;"></i>
+                    <h2>Arjun's Flight to Science</h2>
+                    <p>"Growing up in a village with no library, I thought the stars were just lights. When the Foundation brought the Mobile Lab, I saw them through a telescope for the first time. Today, I am studying at an Indian Institute of Technology."</p>
+                    <p style="font-weight: 800; color: var(--rural-gold); margin-top: 30px; letter-spacing: 2px; text-transform: uppercase;">— Arjun S., Alumni & Scholar</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. GRAMIN SKILL LABS -->
+    <section class="section-padding">
+        <div class="container" style="display: block;">
+            <div style="text-align: center; margin-bottom: 80px;">
+                <h2 style="font-size: 3.2rem; color: var(--rural-primary); font-weight: 800;">Gramin <span>Skill</span> Labs</h2>
+                <p style="max-width: 850px; margin: 25px auto 0; font-size: 1.2rem; color: #555;">Beyond textbooks, we prepare students for the local and global economy through practical vocational integration.</p>
+            </div>
+            <div class="lab-grid">
+                <div class="lab-card" style="background-image: url('<?php echo BASE_URL; ?>assets/frontend/disaster-management.jpg');">
+                    <div class="lab-info">
+                        <h4>Agri-Tech Hubs</h4>
+                        <p>Teaching sustainable farming and water management techniques to the youth.</p>
+                    </div>
+                </div>
+                <div class="lab-card" style="background-image: url('<?php echo BASE_URL; ?>assets/frontend/educating-slum-children.jpg');">
+                    <div class="lab-info">
+                        <h4>Digital Mechanics</h4>
+                        <p>Basics of smartphone repair and small-scale electronic maintenance for local livelihoods.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. SUPPORT TIERS -->
+    <section id="sponsor" class="section-padding" style="background: var(--rural-light);">
+        <div class="container" style="display: block;">
+            <div class="section-header" style="text-align: center;">
+                <h2 style="font-size: 3.2rem; font-weight: 900;">Empower a <span>Village Child</span></h2>
+                <p style="margin-top: 25px; font-size: 1.15rem; color: #555;">Choose your level of participation in rural transformation.</p>
+            </div>
+            <div class="step-grid">
+                <div class="step-item">
+                    <div class="step-circle">₹</div>
+                    <h4 style="font-size: 1.5rem; font-weight: 800; color: var(--rural-primary);">Student Kit</h4>
+                    <p style="margin: 20px 0;">Provides one year of books, uniforms, and shoes for a marginalized student.</p>
+                    <a href="#" class="btn-rural" style="font-size: 0.8rem; padding: 15px 35px;">Donate ₹3,500</a>
+                </div>
+                <div class="step-item">
+                    <div class="step-circle"><i class="fas fa-tablet-button"></i></div>
+                    <h4 style="font-size: 1.5rem; font-weight: 800; color: var(--rural-primary);">Digital Seat</h4>
+                    <p style="margin: 20px 0;">Sponsor a solar-powered tablet and 1 year of internet for a village classroom.</p>
+                    <a href="#" class="btn-rural" style="font-size: 0.8rem; padding: 15px 35px;">Donate ₹8,500</a>
+                </div>
+                <div class="step-item">
+                    <div class="step-circle"><i class="fas fa-microscope"></i></div>
+                    <h4 style="font-size: 1.5rem; font-weight: 800; color: var(--rural-primary);">Adopt a Lab</h4>
+                    <p style="margin: 20px 0;">Support the operations of a Mobile Science Lab in one rural district.</p>
+                    <a href="#" class="btn-rural" style="font-size: 0.8rem; padding: 15px 35px;">Donate ₹25,000</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. PARTNERSHIP BANNER -->
+    <section class="section-padding" style="border-top: 1px solid #ddd;">
+        <div class="container" style="display: block; text-align: center;">
+             <h2 style="font-size: 3.2rem; font-weight: 800; margin-bottom: 30px;">Corporate <span>CSR</span> for Rural Bharat</h2>
+             <p style="margin-bottom: 50px; max-width: 850px; margin: 0 auto 50px; font-size: 1.3rem; line-height: 1.8; color: #555;">Adopt an entire block or district for educational transformation. Scale your CSR impact at the grassroots.</p>
+             <a href="#" class="btn-rural">Request a Block Proposal</a>
+        </div>
+    </section>
+
+    <!-- 12. FINAL CALL TO ACTION -->
+    <section style="background: var(--rural-primary); padding: 100px 0; text-align: center; color: white;">
+        <div class="container" style="display: block;">
+            <h2 style="font-size: 3.5rem; font-weight: 900; margin-bottom: 25px; line-height: 1.1;">Ignite the <span>Rural Spark</span> Today.</h2>
+            <p style="font-size: 1.4rem; margin-bottom: 50px; opacity: 0.9; font-weight: 300;">Your support defines the legacy of rural India's next generation.</p>
+            <a href="#" class="btn-rural" style="background: var(--rural-gold); color: var(--rural-primary); font-size: 1.1rem;">Partner with us</a>
         </div>
     </section>
 
     <?php include(BASE_URL . 'includes/footer.php'); ?>
 
-    <!-- Smooth Reveal Animation -->
+    <!-- Smooth Scroll Script -->
     <script>
-        const observerOptions = { threshold: 0.1 };
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.pillar-premium-card, .story-hero-box, .crisis-card').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'all 1s cubic-bezier(0.4, 0, 0.2, 1)';
-            observer.observe(el);
-        });
-
-        // Smooth Scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const targetId = this.getAttribute('href');
