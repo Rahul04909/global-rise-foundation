@@ -142,85 +142,6 @@ define('BASE_URL', '../../');
             }
         }
         
-        /* FAQ Styles */
-        .faq-section {
-            padding: 80px 0;
-            background: #f9f9f9;
-        }
-        
-        .faq-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            padding: 30px;
-        }
-        
-        .faq-item {
-            border-bottom: 1px solid #eee;
-        }
-        
-        .faq-item:last-child {
-            border-bottom: none;
-        }
-        
-        .faq-title {
-            padding: 20px 0;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 1.1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: #333;
-            transition: color 0.3s ease;
-            user-select: none;
-        }
-        
-        .faq-title:hover {
-            color: var(--primary-color, #E63946);
-        }
-        
-        .faq-title.active {
-            color: var(--primary-color, #E63946);
-        }
-        
-        .faq-icon {
-            width: 24px;
-            height: 24px;
-            background: #f0f0f0;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            color: #555;
-            transition: all 0.3s ease;
-        }
-        
-        .faq-title.active .faq-icon {
-            background: var(--primary-color, #E63946);
-            color: #fff;
-            transform: rotate(45deg); /* Plus becomes Close X */
-        }
-        
-        .faq-content {
-            padding: 0 0 5px; /* Minimal padding */
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out, padding 0.3s ease, opacity 0.3s ease;
-            color: #666;
-            line-height: 1.6;
-            opacity: 0;
-        }
-        
-        .faq-content.open {
-            padding-bottom: 20px;
-            max-height: 500px;
-            transition: max-height 0.5s ease-in, padding 0.3s ease, opacity 0.5s ease;
-            opacity: 1;
-        }
     </style>
 </head>
 <body>
@@ -502,84 +423,10 @@ define('BASE_URL', '../../');
         </div>
     </section>
     
-    <!-- FAQ SECTION -->
-    <section class="faq-section">
-        <div class="container faq-container">
-            <h2 class="programs-heading" style="margin-bottom: 30px;">Frequently Asked Questions</h2>
-            
-            <div class="faq-item">
-                <div class="faq-title">
-                    <span>How is my donation used?</span>
-                    <span class="faq-icon"><i class="fas fa-plus"></i></span>
-                </div>
-                <div class="faq-content">
-                    Your donation directly funds school supplies, teacher salaries, and infrastructure maintenance for rural learning centers. We ensure transparency with regular reports.
-                </div>
-            </div>
-            
-             <div class="faq-item">
-                <div class="faq-title">
-                    <span>Can I visit the centers?</span>
-                    <span class="faq-icon"><i class="fas fa-plus"></i></span>
-                </div>
-                <div class="faq-content">
-                    Yes! We actively encourage donors and volunteers to visit our centers to see the impact firsthand. Please contact us to schedule a visit.
-                </div>
-            </div>
-            
-             <div class="faq-item">
-                <div class="faq-title">
-                    <span>Is donation tax-exempt?</span>
-                    <span class="faq-icon"><i class="fas fa-plus"></i></span>
-                </div>
-                <div class="faq-content">
-                    Yes, all donations to The Global Rise Foundation are eligible for 50% tax exemption under Section 80G of the Income Tax Act.
-                </div>
-            </div>
-            
-             <div class="faq-item">
-                <div class="faq-title">
-                    <span>How can I volunteer?</span>
-                    <span class="faq-icon"><i class="fas fa-plus"></i></span>
-                </div>
-                <div class="faq-content">
-                    You can volunteer by teaching, mentoring, or helping with administrative tasks. Fill out the volunteer form on our website or contact us directly.
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <?php include(BASE_URL . 'includes/footer.php'); ?>
 
-    <script>
-        // FAQ Accordion Logic
-        document.querySelectorAll('.faq-title').forEach(item => {
-            item.addEventListener('click', () => {
-                const content = item.nextElementSibling;
-                const icon = item.querySelector('.faq-icon i');
-                
-                // Close other open items
-                document.querySelectorAll('.faq-title').forEach(otherTitle => {
-                    if (otherTitle !== item && otherTitle.classList.contains('active')) {
-                        otherTitle.classList.remove('active');
-                        otherTitle.nextElementSibling.classList.remove('open');
-                        otherTitle.nextElementSibling.style.maxHeight = null;
-                        // Reset icon visual via CSS on removing active class
-                    }
-                });
 
-                // Toggle current
-                item.classList.toggle('active');
-                
-                if (content.classList.contains('open')) {
-                    content.classList.remove('open');
-                    content.style.maxHeight = null;
-                } else {
-                    content.classList.add('open');
-                    content.style.maxHeight = content.scrollHeight + "px";
-                }
-            });
-        });
-    </script>
 </body>
 </html>
