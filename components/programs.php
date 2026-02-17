@@ -5,7 +5,7 @@
         <!-- Featured Program -->
         <div class="featured-program">
             <div class="featured-image-wrapper">
-                <img src="https://placehold.co/800x500/1D3557/FFFFFF?text=Children+Learning" alt="Education Program" class="featured-image">
+                <img src="../assets/frontend/Girl-Child-Education.jpg" alt="Education Program" class="featured-image">
             </div>
             <div class="featured-content">
                 <h3 class="featured-title">Education</h3>
