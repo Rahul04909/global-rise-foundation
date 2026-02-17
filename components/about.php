@@ -1,5 +1,5 @@
 <section class="about-section">
-    <div class="container">
+    <div class="container" style="display: block;">
         <h2 class="about-heading">About Us</h2>
         
         <div class="about-content">
