@@ -284,7 +284,7 @@ define('BASE_URL', '../../');
                     <p>Formation of Self-Help Groups (SHGs) and training in micro-savings, banking, and digital payments.</p>
                 </div>
                 <div class="we-card">
-                    <div class="we-icon"><i class="fas fa-shield-heart"></i></div>
+                    <div class="we-icon"><i class="fas fa-scale-balanced"></i></div>
                     <h3>Rights & Health</h3>
                     <p>Sensitization workshops on legal rights, domestic protection, and reproductive health management.</p>
                 </div>
