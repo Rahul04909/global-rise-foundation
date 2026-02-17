@@ -2,7 +2,7 @@
     <div class="container footer-content">
         <!-- About Column -->
         <div class="footer-col footer-about">
-            <img src="assets/logo.png" alt="Global Rise Foundation" class="footer-logo">
+            <img src="<?php echo defined('BASE_URL') ? BASE_URL : './'; ?>assets/logo.png" alt="Global Rise Foundation" class="footer-logo">
             <p>
                 Global Rise Foundation is dedicated to empowering communities and creating sustainable change. Join us in making a difference.
             </p>
@@ -18,7 +18,7 @@
         <div class="footer-col footer-links">
             <h3>Quick Links</h3>
             <ul>
-                <li><a href="index.php">Home</a></li>
+                <li><a href="<?php echo defined('BASE_URL') ? BASE_URL : './'; ?>index.php">Home</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Our Work</a></li>
                 <li><a href="#">Impact Stories</a></li>

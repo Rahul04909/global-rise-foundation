@@ -2,14 +2,14 @@
     <div class="container">
         <div class="logo">
             <a href="index.php">
-                <img src="assets/logo.png" alt="Global Rise Foundation Logo">
+                <img src="<?php echo defined('BASE_URL') ? BASE_URL : './'; ?>assets/logo.png" alt="Global Rise Foundation Logo">
             </a>
         </div>
         
         <!-- Desktop Nav -->
         <nav class="main-nav desktop-nav">
             <ul class="nav-links">
-                <li><a href="index.php">Home</a></li>
+                <li><a href="<?php echo defined('BASE_URL') ? BASE_URL : './'; ?>index.php">Home</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Our Work</a></li>
                 <li><a href="#">Get Involved</a></li>
@@ -31,7 +31,7 @@
 <div class="mobile-sidebar" id="mobile-sidebar">
     <div class="sidebar-header">
         <div class="sidebar-logo">
-            <img src="assets/logo.png" alt="Global Rise Foundation">
+            <img src="<?php echo defined('BASE_URL') ? BASE_URL : './'; ?>assets/logo.png" alt="Global Rise Foundation">
         </div>
         <div class="close-sidebar" id="close-sidebar">
             <i class="fas fa-times"></i>
@@ -39,7 +39,7 @@
     </div>
     <div class="sidebar-content">
         <ul class="sidebar-links">
-            <li><a href="index.php">Home</a></li>
+            <li><a href="<?php echo defined('BASE_URL') ? BASE_URL : './'; ?>index.php">Home</a></li>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Our Work</a></li>
             <li><a href="#">Get Involved</a></li>
