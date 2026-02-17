@@ -141,6 +141,81 @@ define('BASE_URL', '../../');
                 font-size: 20px;
             }
         }
+        
+        /* FAQ Styles */
+        .faq-section {
+            padding: 80px 0;
+            background: #f4f6f8;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: #fff;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+        
+        .faq-title {
+            padding: 20px 25px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #333;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            user-select: none;
+        }
+        
+        .faq-title:hover {
+            background-color: #fafafa;
+            color: var(--primary-color, #E63946);
+        }
+        
+        .faq-title.active {
+            background-color: #fff;
+            color: var(--primary-color, #E63946);
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .faq-title i {
+            transition: transform 0.3s ease;
+            color: #ccc;
+        }
+        
+        .faq-title.active i {
+            transform: rotate(180deg);
+            color: var(--primary-color, #E63946);
+        }
+        
+        .faq-content {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .faq-content.open {
+            padding: 20px 25px;
+            max-height: 500px;
+            transition: max-height 0.5s ease-in, padding 0.3s ease;
+        }
     </style>
 </head>
 <body>
@@ -424,19 +499,47 @@ define('BASE_URL', '../../');
     
     <!-- FAQ SECTION -->
     <section class="faq-section">
-        <div class="container" style="display: block; max-width: 800px;">
+        <div class="container faq-container">
             <h2 class="programs-heading">Frequently Asked Questions</h2>
+            
             <div class="faq-item">
-                <div class="faq-title">How is my donation used? <i class="fas fa-chevron-down"></i></div>
-                <div class="faq-content">Your donation directly funds school supplies, teacher salaries, and infrastructure maintenance.</div>
+                <div class="faq-title">
+                    <span>How is my donation used?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-content">
+                    Your donation directly funds school supplies, teacher salaries, and infrastructure maintenance for rural learning centers. We ensure transparency with regular reports.
+                </div>
             </div>
+            
              <div class="faq-item">
-                <div class="faq-title">Can I visit the centers? <i class="fas fa-chevron-down"></i></div>
-                <div class="faq-content">Yes! We encourage donors and volunteers to visit our centers. Contact us to schedule.</div>
+                <div class="faq-title">
+                    <span>Can I visit the centers?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-content">
+                    Yes! We actively encourage donors and volunteers to visit our centers to see the impact firsthand. Please contact us to schedule a visit.
+                </div>
             </div>
+            
              <div class="faq-item">
-                <div class="faq-title">Is donation tax-exempt? <i class="fas fa-chevron-down"></i></div>
-                <div class="faq-content">Yes, all donations are eligible for tax exemption under 80G.</div>
+                <div class="faq-title">
+                    <span>Is donation tax-exempt?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-content">
+                    Yes, all donations to The Global Rise Foundation are eligible for 50% tax exemption under Section 80G of the Income Tax Act.
+                </div>
+            </div>
+            
+             <div class="faq-item">
+                <div class="faq-title">
+                    <span>How can I volunteer?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-content">
+                    You can volunteer by teaching, mentoring, or helping with administrative tasks. Fill out the volunteer form on our website or contact us directly.
+                </div>
             </div>
         </div>
     </section>
@@ -447,8 +550,28 @@ define('BASE_URL', '../../');
         // FAQ Toggle
         document.querySelectorAll('.faq-title').forEach(item => {
             item.addEventListener('click', () => {
+                const parent = item.parentElement;
                 const content = item.nextElementSibling;
-                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+                
+                // Close other open items (Accordion behavior)
+                document.querySelectorAll('.faq-title').forEach(otherTitle => {
+                    if (otherTitle !== item && otherTitle.classList.contains('active')) {
+                        otherTitle.classList.remove('active');
+                        otherTitle.nextElementSibling.classList.remove('open');
+                        otherTitle.nextElementSibling.style.maxHeight = null;
+                    }
+                });
+
+                // Toggle current
+                item.classList.toggle('active');
+                
+                if (content.classList.contains('open')) {
+                    content.classList.remove('open');
+                    content.style.maxHeight = null;
+                } else {
+                    content.classList.add('open');
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
             });
         });
     </script>
