@@ -48,82 +48,98 @@ define('BASE_URL', '../../');
             text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
         
-        /* Timeline specific styles as they are not in a global component yet */
-        .timeline-section {
+        /* Process Section Styles */
+        .process-section {
             padding: 80px 0;
             background: #fff;
-        }
-        .timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .timeline::after {
-            content: '';
-            position: absolute;
-            width: 4px;
-            background-color: var(--primary-color, #E63946);
-            top: 0; bottom: 0; left: 50%; margin-left: -2px;
-        }
-        .timeline-container {
-            padding: 10px 40px;
-            position: relative;
-            background-color: inherit;
-            width: 50%;
-        }
-        .timeline-container::after {
-            content: '';
-            position: absolute;
-            width: 20px; height: 20px;
-            right: -10px;
-            background-color: #fff;
-            border: 4px solid #FF9800;
-            top: 15px;
-            border-radius: 50%;
-            z-index: 1;
-        }
-        .timeline-left { left: 0; }
-        .timeline-right { left: 50%; }
-        .timeline-left::after { right: -10px; }
-        .timeline-right::after { left: -10px; }
-        .timeline-content {
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
         }
         
-        /* FAQ Styles */
-        .faq-section {
-            padding: 60px 0;
-            background: #f9f9f9;
-        }
-        .faq-item {
-            background: #fff;
-            margin-bottom: 10px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        .faq-title {
-            padding: 15px 20px;
-            cursor: pointer;
-            font-weight: 600;
+        .process-steps {
             display: flex;
             justify-content: space-between;
-        }
-        .faq-content {
-            padding: 0 20px 20px;
-            display: none;
-            color: #666;
+            align-items: flex-start;
+            margin-top: 50px;
+            position: relative;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
-        @media screen and (max-width: 600px) {
-            .timeline::after { left: 31px; }
-            .timeline-container { width: 100%; padding-left: 70px; padding-right: 25px; }
-            .timeline-right { left: 0; }
-            .timeline-left::after, .timeline-right::after { left: 21px; }
-            .hero-title-project { font-size: 2rem; }
+        /* Connecting Line */
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px; /* Aligns with circle center */
+            left: 50px;
+            right: 50px;
+            height: 4px;
+            background-color: #e0e0e0;
+            z-index: 1;
+        }
+        
+        .step-item {
+            flex: 1;
+            position: relative;
+            z-index: 2;
+            padding: 0 15px;
+        }
+        
+        .step-circle {
+            width: 80px;
+            height: 80px;
+            background: #fff;
+            border: 4px solid var(--primary-color, #E63946);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color, #E63946);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .step-item:hover .step-circle {
+            background: var(--primary-color, #E63946);
+            color: #fff;
+            transform: scale(1.1);
+        }
+        
+        .step-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .step-desc {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .process-steps {
+                flex-direction: column;
+                align-items: center;
+                gap: 40px;
+            }
+            .process-steps::before {
+                width: 4px;
+                height: 100%; /* Vertical line for mobile */
+                top: 0;
+                left: 50%;
+                margin-left: -2px;
+                right: auto;
+            }
+            .step-circle {
+                width: 70px;
+                height: 70px;
+                font-size: 20px;
+            }
         }
     </style>
 </head>
@@ -311,34 +327,46 @@ define('BASE_URL', '../../');
         </div>
     </section>
     
-    <!-- TIMELINE SECTION (Custom styling tailored to match site feel)-->
-    <section class="timeline-section">
-        <div class="container" style="display:block; text-align:center;">
+    <!-- PROCESS SECTION (Redesigned Horizontal Flow) -->
+    <section class="process-section">
+        <div class="container" style="display:block;">
             <h2 class="programs-heading">Our Process</h2>
-            <div class="timeline">
-                <div class="timeline-container timeline-left">
-                    <div class="timeline-content">
-                        <h4>1. Enrollment</h4>
-                        <p>Surveying villages to identify and enrol out-of-school children.</p>
+            
+            <div class="process-steps">
+                <!-- Step 1 -->
+                <div class="step-item">
+                    <div class="step-circle">
+                        <i class="fas fa-search"></i>
                     </div>
+                    <h4 class="step-title">Enrollment</h4>
+                    <p class="step-desc">Identifying and enrolling out-of-school children.</p>
                 </div>
-                <div class="timeline-container timeline-right">
-                    <div class="timeline-content">
-                        <h4>2. Learning</h4>
-                        <p>Regular classes, nutritional support, and holistic development.</p>
+                
+                <!-- Step 2 -->
+                <div class="step-item">
+                    <div class="step-circle">
+                        <i class="fas fa-book-open"></i>
                     </div>
+                    <h4 class="step-title">Learning</h4>
+                    <p class="step-desc">Regular classes and nutritional support.</p>
                 </div>
-                <div class="timeline-container timeline-left">
-                    <div class="timeline-content">
-                        <h4>3. Skilling</h4>
-                        <p>Introducing vocational and digital skills alongside academics.</p>
+                
+                <!-- Step 3 -->
+                <div class="step-item">
+                    <div class="step-circle">
+                        <i class="fas fa-laptop-code"></i>
                     </div>
+                    <h4 class="step-title">Skilling</h4>
+                    <p class="step-desc">Vocational and digital skills training.</p>
                 </div>
-                <div class="timeline-container timeline-right">
-                    <div class="timeline-content">
-                        <h4>4. Future Ready</h4>
-                        <p>Career counseling and scholarship support for higher studies.</p>
+                
+                <!-- Step 4 -->
+                <div class="step-item">
+                    <div class="step-circle">
+                        <i class="fas fa-graduation-cap"></i>
                     </div>
+                    <h4 class="step-title">Future Ready</h4>
+                    <p class="step-desc">Career guidance and higher education support.</p>
                 </div>
             </div>
         </div>
