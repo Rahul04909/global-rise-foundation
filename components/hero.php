@@ -3,15 +3,15 @@
         <!-- Slides -->
         <!-- Slide 1 -->
         <div class="hero-slide active">
-            <img src="https://placehold.co/1920x600/1D3557/FFFFFF?text=Empowering+Communities" alt="Empowering Communities">
+            <img src="../assets/hero/health-banner.png" alt="Empowering Communities">
         </div>
         <!-- Slide 2 -->
         <div class="hero-slide">
-            <img src="https://placehold.co/1920x600/E63946/FFFFFF?text=Education+for+All" alt="Education for All">
+            <img src="../assets/hero/health-banner.png" alt="Education for All">
         </div>
         <!-- Slide 3 -->
         <div class="hero-slide">
-            <img src="https://placehold.co/1920x600/457B9D/FFFFFF?text=Healthcare+Initiatives" alt="Healthcare Initiatives">
+            <img src="../assets/hero/health-banner.png" alt="Healthcare Initiatives">
         </div>
         
         <!-- Navigation Buttons -->
