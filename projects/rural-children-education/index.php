@@ -188,7 +188,7 @@ define('BASE_URL', '../../');
                 <!-- Video/Image Column -->
                 <div class="about-video-wrapper">
                     <!-- Placeholder for project specific video or image -->
-                    <img src="<?php echo BASE_URL; ?>assets/frontend/AKM_7992-scaled.jpg" alt="Classroom" style="width:100%; height:100%; object-fit:cover;">
+                    <img src="<?php echo BASE_URL; ?>assets/frontend/rural-about.jpg" alt="Classroom" style="width:100%; height:100%; object-fit:cover;">
                 </div>
 
                 <!-- Text Column -->
