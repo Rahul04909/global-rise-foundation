@@ -10,6 +10,9 @@ define('BASE_URL', '../../');
     <title>Rural Children Education | The Global Rise Foundation</title>
     <meta name="description" content="Empowering rural children in India through education. Join The Global Rise Foundation in our mission to provide quality education to every child.">
     
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <!-- Global Styles -->
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/style.css">
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/footer.css">
