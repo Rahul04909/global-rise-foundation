@@ -166,7 +166,7 @@ define('BASE_URL', '../../');
         <div class="hero-slider-container" id="heroSlider">
             <!-- Reuse slide structure but with project images -->
             <div class="hero-slide active">
-                <img src="<?php echo BASE_URL; ?>assets/images/rural-education-hero.jpg" alt="Rural Education" style="filter: brightness(0.6);">
+                <img src="<?php echo BASE_URL; ?>assets/frontend/promo-banner.png" alt="Rural Education" style="filter: brightness(0.6);">
                 <div class="project-hero-overlay">
                     <div class="container" style="flex-direction: column;">
                         <h1 class="hero-title-project">Educating Rural Children</h1>
