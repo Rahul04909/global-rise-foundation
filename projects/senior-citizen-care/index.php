@@ -240,12 +240,12 @@ define('BASE_URL', '../../');
                     <p>Mobile clinics and specialized health camps providing geriatric check-ups, medication, and physiotherapy.</p>
                 </div>
                 <div class="senior-card">
-                    <i class="fas fa-people-arrows"></i>
+                    <i class="fas fa-hands-holding-heart"></i>
                     <h3>Companionship</h3>
                     <p>Connecting elders with youth volunteers through physical visits and "Silver Line" telephone companionship.</p>
                 </div>
                 <div class="senior-card">
-                    <i class="fas fa-bowl-food"></i>
+                    <i class="fas fa-house-chimney-medical"></i>
                     <h3>Sneh Bhavans</h3>
                     <p>Safe day-care centers and assisted living homes providing nutritional meals and high-hygiene shelter.</p>
                 </div>
