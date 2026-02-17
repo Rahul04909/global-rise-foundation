@@ -145,31 +145,28 @@ define('BASE_URL', '../../');
         /* FAQ Styles */
         .faq-section {
             padding: 80px 0;
-            background: #f4f6f8;
+            background: #f9f9f9;
         }
         
         .faq-container {
             max-width: 800px;
             margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            padding: 30px;
         }
         
         .faq-item {
-            background: #fff;
-            margin-bottom: 15px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border: 1px solid #eee;
-            transition: all 0.3s ease;
+            border-bottom: 1px solid #eee;
         }
         
-        .faq-item:hover {
-            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-            transform: translateY(-2px);
+        .faq-item:last-child {
+            border-bottom: none;
         }
         
         .faq-title {
-            padding: 20px 25px;
+            padding: 20px 0;
             cursor: pointer;
             font-weight: 600;
             font-size: 1.1rem;
@@ -177,44 +174,52 @@ define('BASE_URL', '../../');
             justify-content: space-between;
             align-items: center;
             color: #333;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            transition: color 0.3s ease;
             user-select: none;
         }
         
         .faq-title:hover {
-            background-color: #fafafa;
             color: var(--primary-color, #E63946);
         }
         
         .faq-title.active {
-            background-color: #fff;
             color: var(--primary-color, #E63946);
-            border-bottom: 1px solid #f0f0f0;
         }
         
-        .faq-title i {
-            transition: transform 0.3s ease;
-            color: #ccc;
+        .faq-icon {
+            width: 24px;
+            height: 24px;
+            background: #f0f0f0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #555;
+            transition: all 0.3s ease;
         }
         
-        .faq-title.active i {
-            transform: rotate(180deg);
-            color: var(--primary-color, #E63946);
+        .faq-title.active .faq-icon {
+            background: var(--primary-color, #E63946);
+            color: #fff;
+            transform: rotate(45deg); /* Plus becomes Close X */
         }
         
         .faq-content {
-            padding: 0 25px;
+            padding: 0 0 5px; /* Minimal padding */
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease-out, padding 0.3s ease;
-            color: #555;
+            transition: max-height 0.3s ease-out, padding 0.3s ease, opacity 0.3s ease;
+            color: #666;
             line-height: 1.6;
+            opacity: 0;
         }
         
         .faq-content.open {
-            padding: 20px 25px;
+            padding-bottom: 20px;
             max-height: 500px;
-            transition: max-height 0.5s ease-in, padding 0.3s ease;
+            transition: max-height 0.5s ease-in, padding 0.3s ease, opacity 0.5s ease;
+            opacity: 1;
         }
     </style>
 </head>
@@ -249,7 +254,7 @@ define('BASE_URL', '../../');
                 <!-- Video/Image Column -->
                 <div class="about-video-wrapper">
                     <!-- Placeholder for project specific video or image -->
-                    <img src="<?php echo BASE_URL; ?>assets/frontend/Girl-Child-Education.jpg" alt="Classroom" style="width:100%; height:100%; object-fit:cover;">
+                    <img src="<?php echo BASE_URL; ?>assets/frontend/rural-education.webp" alt="Classroom" style="width:100%; height:100%; object-fit:cover;">
                 </div>
 
                 <!-- Text Column -->
@@ -500,12 +505,12 @@ define('BASE_URL', '../../');
     <!-- FAQ SECTION -->
     <section class="faq-section">
         <div class="container faq-container">
-            <h2 class="programs-heading">Frequently Asked Questions</h2>
+            <h2 class="programs-heading" style="margin-bottom: 30px;">Frequently Asked Questions</h2>
             
             <div class="faq-item">
                 <div class="faq-title">
                     <span>How is my donation used?</span>
-                    <i class="fas fa-chevron-down"></i>
+                    <span class="faq-icon"><i class="fas fa-plus"></i></span>
                 </div>
                 <div class="faq-content">
                     Your donation directly funds school supplies, teacher salaries, and infrastructure maintenance for rural learning centers. We ensure transparency with regular reports.
@@ -515,7 +520,7 @@ define('BASE_URL', '../../');
              <div class="faq-item">
                 <div class="faq-title">
                     <span>Can I visit the centers?</span>
-                    <i class="fas fa-chevron-down"></i>
+                    <span class="faq-icon"><i class="fas fa-plus"></i></span>
                 </div>
                 <div class="faq-content">
                     Yes! We actively encourage donors and volunteers to visit our centers to see the impact firsthand. Please contact us to schedule a visit.
@@ -525,7 +530,7 @@ define('BASE_URL', '../../');
              <div class="faq-item">
                 <div class="faq-title">
                     <span>Is donation tax-exempt?</span>
-                    <i class="fas fa-chevron-down"></i>
+                    <span class="faq-icon"><i class="fas fa-plus"></i></span>
                 </div>
                 <div class="faq-content">
                     Yes, all donations to The Global Rise Foundation are eligible for 50% tax exemption under Section 80G of the Income Tax Act.
@@ -535,7 +540,7 @@ define('BASE_URL', '../../');
              <div class="faq-item">
                 <div class="faq-title">
                     <span>How can I volunteer?</span>
-                    <i class="fas fa-chevron-down"></i>
+                    <span class="faq-icon"><i class="fas fa-plus"></i></span>
                 </div>
                 <div class="faq-content">
                     You can volunteer by teaching, mentoring, or helping with administrative tasks. Fill out the volunteer form on our website or contact us directly.
@@ -547,18 +552,19 @@ define('BASE_URL', '../../');
     <?php include(BASE_URL . 'includes/footer.php'); ?>
 
     <script>
-        // FAQ Toggle
+        // FAQ Accordion Logic
         document.querySelectorAll('.faq-title').forEach(item => {
             item.addEventListener('click', () => {
-                const parent = item.parentElement;
                 const content = item.nextElementSibling;
+                const icon = item.querySelector('.faq-icon i');
                 
-                // Close other open items (Accordion behavior)
+                // Close other open items
                 document.querySelectorAll('.faq-title').forEach(otherTitle => {
                     if (otherTitle !== item && otherTitle.classList.contains('active')) {
                         otherTitle.classList.remove('active');
                         otherTitle.nextElementSibling.classList.remove('open');
                         otherTitle.nextElementSibling.style.maxHeight = null;
+                        // Reset icon visual via CSS on removing active class
                     }
                 });
 
