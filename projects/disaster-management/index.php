@@ -224,7 +224,7 @@ define('BASE_URL', '../../');
                     <p>Deploying specialized emergency teams within 24-48 hours of a disaster notice to initiate rescue operations.</p>
                 </div>
                 <div class="pillar-card">
-                    <div class="pillar-icon"><i class="fas fa-box-heart"></i></div>
+                    <div class="pillar-icon"><i class="fas fa-parachute-box"></i></div>
                     <h3>Essential Relief</h3>
                     <p>Distribution of vital resources including clean water, food supplies, hygiene kits, and emergency shelters.</p>
                 </div>
@@ -234,7 +234,7 @@ define('BASE_URL', '../../');
                     <p>Setting up mobile medical camps and providing psychological support to survivors of natural disasters.</p>
                 </div>
                 <div class="pillar-card">
-                    <div class="pillar-icon"><i class="fas fa-tools"></i></div>
+                    <div class="pillar-icon"><i class="fas fa-screwdriver-wrench"></i></div>
                     <h3>Rehabilitation</h3>
                     <p>Long-term commitment to rebuilding homes, livelihoods, and schools to restore normalcy in affected areas.</p>
                 </div>
