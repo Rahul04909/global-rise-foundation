@@ -306,12 +306,12 @@ define('BASE_URL', '../../');
             </div>
 
             <div class="impact-bottom-image-wrapper">
-                <img src="<?php echo BASE_URL; ?>assets/frontend/promo-banner.png" alt="Children Smiling" class="impact-bottom-image">
+                <img src="<?php echo BASE_URL; ?>assets/frontend/rural-education.png" alt="Children Smiling" class="impact-bottom-image">
             </div>
         </div>
     </section>
     
-    <!-- TIMELINE SECTION (Custom styling tailored to match site feel) -->
+    <!-- TIMELINE SECTION (Custom styling tailored to match site feel)-->
     <section class="timeline-section">
         <div class="container" style="display:block; text-align:center;">
             <h2 class="programs-heading">Our Process</h2>
