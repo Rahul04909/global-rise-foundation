@@ -359,45 +359,8 @@ define('BASE_URL', '../../');
         </div>
     </section>
 
-    <!-- 2. VISIONARY MANDATE (Asymmetrical) -->
-    <section id="vision" class="vision-section">
-        <div class="container" style="display: block;">
-            <div class="vision-flex">
-                <div class="vision-images">
-                    <img src="<?php echo BASE_URL; ?>assets/frontend/rural-about.jpg" alt="Rural Class" class="img-main">
-                    <img src="<?php echo BASE_URL; ?>assets/frontend/rural-children-education.jpg" alt="Happy Kids" class="img-sub">
-                </div>
-                <div class="vision-content">
-                    <span class="vision-tag">The Growth Mandate</span>
-                    <h2 style="font-size: 3.5rem; color: var(--rural-deep); margin-bottom: 30px; font-weight: 900; line-height: 1.1;">Igniting Every <span>Mind</span> in the Village.</h2>
-                    <p style="font-size: 1.25rem; color: #555; line-height: 1.8; margin-bottom: 40px;">
-                        Education is the most powerful tool to change the rural landscape. Our holistic approach integrates academic rigor, technical training, and ethical development to create future leaders from grassroots.
-                    </p>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                         <div style="display: flex; gap: 15px; align-items: center;">
-                            <i class="fas fa-check-double" style="color: var(--rural-accent); font-size: 1.5rem;"></i>
-                            <span style="font-weight: 700; color: var(--rural-deep);">Smart Infrastructure</span>
-                         </div>
-                         <div style="display: flex; gap: 15px; align-items: center;">
-                            <i class="fas fa-check-double" style="color: var(--rural-accent); font-size: 1.5rem;"></i>
-                            <span style="font-weight: 700; color: var(--rural-deep);">Digital Parity</span>
-                         </div>
-                         <div style="display: flex; gap: 15px; align-items: center;">
-                            <i class="fas fa-check-double" style="color: var(--rural-accent); font-size: 1.5rem;"></i>
-                            <span style="font-weight: 700; color: var(--rural-deep);">Holistic Growth</span>
-                         </div>
-                         <div style="display: flex; gap: 15px; align-items: center;">
-                            <i class="fas fa-check-double" style="color: var(--rural-accent); font-size: 1.5rem;"></i>
-                            <span style="font-weight: 700; color: var(--rural-deep);">Youth Leadership</span>
-                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3. THE CRISIS DATA -->
-    <section class="section-padding">
+    <!-- 2. THE CRISIS DATA (Direct transition for impact) -->
+    <section class="section-padding" id="vision">
         <div class="container" style="display: block;">
             <div class="section-header">
                 <h2 style="font-size: 1.5rem; letter-spacing: 5px; color: var(--rural-accent); text-transform: uppercase;">The Challenge</h2>
@@ -585,18 +548,28 @@ define('BASE_URL', '../../');
     </section>
 
     <!-- 10. SCHOOL MANAGEMENT COUNCILS -->
-    <section class="section-padding bg-clean">
-        <div class="container" style="display: block; text-align: center;">
-            <h2 style="font-size: 3rem; color: var(--rural-deep); margin-bottom: 30px; font-weight: 900;">Grassroots <span>Governance</span></h2>
-            <p style="max-width: 800px; margin: 0 auto 50px; line-height: 1.8; color: #555;">Our success is based on local ownership. Each school is managed by a council of village elders, parents, and teachers, ensuring 100% accountability and cultural relevance.</p>
-            <div style="display: flex; gap: 30px; justify-content: center; flex-wrap: wrap;">
-                 <div style="padding: 40px; background: white; border-radius: 30px; max-width: 300px; border-bottom: 5px solid var(--rural-gold);">
-                    <h4 style="color: var(--rural-deep);">Transparent Audits</h4>
-                    <p style="font-size: 0.9rem; color: #888;">Monthly reviews by community members.</p>
+    <section class="section-padding" style="background: var(--rural-cream);">
+        <div class="container" style="display: block;">
+            <div class="section-header">
+                <h2 style="font-size: 3.5rem; color: var(--rural-deep); font-weight: 900;">Grassroots <span>Governance</span></h2>
+                <p style="max-width: 800px; margin: 20px auto 0; line-height: 1.8; color: #555;">Our success is based on local ownership. Each school is managed by a council of village elders, parents, and teachers, ensuring 100% accountability and cultural relevance.</p>
+            </div>
+            
+            <div class="donation-grid" style="margin-top: 60px;">
+                 <div style="padding: 50px; background: white; border-radius: 40px; box-shadow: 0 20px 50px rgba(0,0,0,0.05); text-align: center; border-bottom: 8px solid var(--rural-gold);">
+                    <div style="font-size: 3rem; color: var(--rural-deep); margin-bottom: 25px;"><i class="fas fa-handshake-angle"></i></div>
+                    <h4 style="font-size: 1.5rem; color: var(--rural-deep); margin-bottom: 15px;">Local Ownership</h4>
+                    <p style="color: #666;">Empowering village councils to lead the transformation journey.</p>
                  </div>
-                 <div style="padding: 40px; background: white; border-radius: 30px; max-width: 300px; border-bottom: 5px solid var(--rural-gold);">
-                    <h4 style="color: var(--rural-deep);">Cultural Fusion</h4>
-                    <p style="font-size: 0.9rem; color: #888;">Curriculums that respect local traditions.</p>
+                 <div style="padding: 50px; background: white; border-radius: 40px; box-shadow: 0 20px 50px rgba(0,0,0,0.05); text-align: center; border-bottom: 8px solid var(--rural-accent);">
+                    <div style="font-size: 3rem; color: var(--rural-deep); margin-bottom: 25px;"><i class="fas fa-file-invoice-dollar"></i></div>
+                    <h4 style="font-size: 1.5rem; color: var(--rural-deep); margin-bottom: 15px;">Transparent Audits</h4>
+                    <p style="color: #666;">Monthly community-led reviews ensure 100% fiscal transparency.</p>
+                 </div>
+                 <div style="padding: 50px; background: white; border-radius: 40px; box-shadow: 0 20px 50px rgba(0,0,0,0.05); text-align: center; border-bottom: 8px solid var(--rural-mid);">
+                    <div style="font-size: 3rem; color: var(--rural-deep); margin-bottom: 25px;"><i class="fas fa-earth-asia"></i></div>
+                    <h4 style="font-size: 1.5rem; color: var(--rural-deep); margin-bottom: 15px;">Cultural Fusion</h4>
+                    <p style="color: #666;">Curriculums that respect local traditions and village ecosystems.</p>
                  </div>
             </div>
         </div>
@@ -605,12 +578,15 @@ define('BASE_URL', '../../');
     <!-- 11. CORPORATE PARTNERSHIPS -->
     <section class="section-padding">
         <div class="container" style="display: block;">
-            <div style="background: var(--rural-cream); padding: 80px; border-radius: 60px; text-align: center; border: 2px dashed var(--rural-gold);">
-                 <h2 style="font-size: 3rem; color: var(--rural-deep); font-weight: 800;">CSR for <span>Rural Bharat</span></h2>
-                 <p style="max-width: 700px; margin: 30px auto 40px; color: #666; font-size: 1.2rem;">Scale your social impact by adopting an entire block or district for educational transformation.</p>
-                 <div style="display: flex; gap: 30px; justify-content: center; flex-wrap: wrap;">
-                    <a href="#" class="btn-premium">Inquire Corporate Plan</a>
-                    <a href="#" class="btn-premium-outline">Volunteer at a School</a>
+            <div style="background: var(--rural-deep); padding: 100px 80px; border-radius: 60px; text-align: center; position: relative; overflow: hidden;">
+                 <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('<?php echo BASE_URL; ?>assets/frontend/rural-children-education.jpg') center/cover; opacity: 0.15;"></div>
+                 <div style="position: relative; z-index: 2;">
+                    <h2 style="font-size: 3.5rem; color: var(--rural-gold); font-weight: 900; margin-bottom: 20px;">CSR for <span>Rural Bharat</span></h2>
+                    <p style="max-width: 750px; margin: 0 auto 50px; color: var(--rural-cream); font-size: 1.4rem; opacity: 0.9; line-height: 1.6;">Scale your social impact by adopting an entire block or district for educational transformation. Together, we can redefine rural landscapes.</p>
+                    <div style="display: flex; gap: 30px; justify-content: center; flex-wrap: wrap;">
+                       <a href="#" class="btn-gold" style="padding: 22px 60px;">Inquire Corporate Plan</a>
+                       <a href="#" class="btn-premium-outline" style="border-color: white; color: white;">Volunteer at a School</a>
+                    </div>
                  </div>
             </div>
         </div>
@@ -639,7 +615,7 @@ define('BASE_URL', '../../');
             });
         }, observerOptions);
 
-        document.querySelectorAll('.pillar-premium-card, .vision-content, .img-main, .story-hero-box').forEach(el => {
+        document.querySelectorAll('.pillar-premium-card, .story-hero-box, .crisis-card').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'all 1s cubic-bezier(0.4, 0, 0.2, 1)';
