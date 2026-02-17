@@ -236,3 +236,57 @@ body {
     display: block;
     opacity: 1;
 }
+
+/* Dropdown Menu Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 250px;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 1100;
+    border-top: 3px solid var(--primary-color);
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li {
+    padding: 0;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 12px 20px;
+    color: #333;
+    width: 100%;
+    font-size: 15px;
+    /* Slightly smaller than main links */
+}
+
+.dropdown-menu li a:after {
+    display: none;
+    /* Remove main nav underline effect */
+}
+
+.dropdown-menu li a:hover {
+    background: #f4f6f8;
+    color: var(--primary-color);
+    padding-left: 25px;
+    /* Subtle movement */
+}
