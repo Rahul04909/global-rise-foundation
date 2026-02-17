@@ -2,9 +2,7 @@
     <div class="container" style="display: block;">
         <h2 class="mission-heading">One of India's Largest <span>Volunteer Organisation</span></h2>
         
-        <div class="mission-banner-wrapper">
-            <img src="assets/frontend/mission-banner.avif" alt="Volunteers working together" class="mission-banner-img">
-        </div>
+
 
         <div class="mission-content">
             <div class="mission-col">

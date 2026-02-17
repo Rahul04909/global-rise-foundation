@@ -11,7 +11,7 @@
     font-weight: 700;
     color: #333;
     text-transform: uppercase;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     letter-spacing: 1px;
 }
 
@@ -20,20 +20,7 @@
     /* Orange/Red highlight */
 }
 
-.mission-banner-wrapper {
-    margin-bottom: 50px;
-    position: relative;
-    padding: 0 20px;
-}
 
-.mission-banner-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 10px;
-    /* Soften edges */
-}
 
 .mission-content {
     display: flex;
