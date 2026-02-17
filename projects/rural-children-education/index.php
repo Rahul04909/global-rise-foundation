@@ -1,6 +1,6 @@
 <?php 
-define('BASE_URL', '../'); // Adjust path for subdirectory
-include '../includes/header.php'; 
+define('BASE_URL', '../../'); // Adjust path for subdirectory
+include '../../includes/header.php'; 
 ?>
 
 <!DOCTYPE html>
@@ -121,44 +121,65 @@ include '../includes/header.php';
         </div>
     </section>
 
-    <!-- 6. Success Stories -->
+    <!-- 6. Success Stories (Refined) -->
     <section class="stories-section">
         <div class="container">
-            <h2 class="section-title">Stories of Change</h2>
-            
-            <div class="story-card">
-                <div class="story-img">
-                    <img src="<?php echo BASE_URL; ?>assets/frontend/women-empowerment.jpg" alt="Riya's Story">
+            <div class="stories-layout">
+                <div class="stories-sidebar">
+                    <h2 class="section-title-left">Stories of Change</h2>
+                    <p class="stories-intro">Real people, real impact. See how education is transforming lives in rural India one child at a time.</p>
+                    <div class="stories-deco-line"></div>
                 </div>
-                <div class="story-content">
-                    <h3>Riya's Journey to Medical School</h3>
-                    <p>"Coming from a small village where girls rarely study past 8th grade, Global Rise Foundation gave me the wings to dream. Today, I am preparing for my medical entrance exams because of the scholarship and mentorship I received."</p>
-                    <p><strong>- Riya, 17, Bihar</strong></p>
-                </div>
-            </div>
+                <div class="stories-list">
+                    <!-- Story 1 -->
+                    <div class="story-card-refined">
+                        <div class="story-img-refined">
+                            <img src="<?php echo BASE_URL; ?>assets/frontend/women-empowerment.jpg" alt="Riya's Story">
+                        </div>
+                        <div class="story-content-refined">
+                            <h3>Riya's Journey to Medical School</h3>
+                            <p>"Coming from a small village where girls rarely study past 8th grade, Global Rise Foundation gave me the wings to dream. Today, I am preparing for my medical entrance exams because of the scholarship and mentorship I received."</p>
+                            <p class="story-author">- Riya, 17, Bihar</p>
+                        </div>
+                    </div>
 
-             <div class="story-card" style="flex-direction: row-reverse;">
-                <div class="story-img">
-                    <img src="<?php echo BASE_URL; ?>assets/frontend/disaster-management.jpg" alt="Community Story">
-                </div>
-                <div class="story-content">
-                    <h3>A Village Transformed</h3>
-                    <p>"Our village school was in ruins. The Foundation not only rebuilt the school but trained our youth. Now, every child in our village attends school regularly."</p>
-                    <p><strong>- Village Sarpanch, Rajasthan</strong></p>
+                    <!-- Story 2 -->
+                    <div class="story-card-refined">
+                        <div class="story-img-refined">
+                            <img src="<?php echo BASE_URL; ?>assets/frontend/disaster-management.jpg" alt="Community Story">
+                        </div>
+                        <div class="story-content-refined">
+                            <h3>A Village Transformed</h3>
+                            <p>"Our village school was in ruins. The Foundation not only rebuilt the school but trained our youth. Now, every child in our village attends school regularly."</p>
+                            <p class="story-author">- Village Sarpanch, Rajasthan</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 7. Gallery -->
+    <!-- 7. Gallery (Refined) -->
     <section class="page-gallery">
         <div class="container">
             <h2 class="section-title">Gallery</h2>
-            <div class="gallery-grid-static">
-                <img src="<?php echo BASE_URL; ?>assets/frontend/Girl-Child-Education.jpg" alt="Gallery">
-                <img src="<?php echo BASE_URL; ?>assets/frontend/persons-disabilites.jpg" alt="Gallery">
-                <img src="<?php echo BASE_URL; ?>assets/frontend/women-empowerment.jpg" alt="Gallery">
-                <img src="<?php echo BASE_URL; ?>assets/frontend/disaster-management.jpg" alt="Gallery">
+            <div class="gallery-grid-polished">
+                <div class="gallery-item-polished">
+                    <img src="<?php echo BASE_URL; ?>assets/frontend/Girl-Child-Education.jpg" alt="Classroom">
+                    <div class="gallery-overlay"><i class="fas fa-plus"></i></div>
+                </div>
+                <div class="gallery-item-polished">
+                    <img src="<?php echo BASE_URL; ?>assets/frontend/persons-disabilites.jpg" alt="Students">
+                    <div class="gallery-overlay"><i class="fas fa-plus"></i></div>
+                </div>
+                <div class="gallery-item-polished">
+                    <img src="<?php echo BASE_URL; ?>assets/frontend/women-empowerment.jpg" alt="Community">
+                    <div class="gallery-overlay"><i class="fas fa-plus"></i></div>
+                </div>
+                <div class="gallery-item-polished">
+                    <img src="<?php echo BASE_URL; ?>assets/frontend/disaster-management.jpg" alt="Training">
+                    <div class="gallery-overlay"><i class="fas fa-plus"></i></div>
+                </div>
             </div>
         </div>
     </section>
@@ -174,7 +195,7 @@ include '../includes/header.php';
         </div>
     </section>
 
-    <?php include '../includes/footer.php'; ?>
+    <?php include '../../includes/footer.php'; ?>
 
 </body>
 </html>

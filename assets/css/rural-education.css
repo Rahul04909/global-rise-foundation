@@ -2,15 +2,13 @@
 .rural-edu-page {
     font-family: 'Poppins', sans-serif;
     color: #333;
+    background-color: #fcfcfc;
 }
 
 /* 1. Hero Section */
 .hero-section-inner {
-    background: url('../../assets/frontend/mission-banner.avif') center/cover no-repeat;
-    /* Fallback or specific image */
-    background-blend-mode: overlay;
-    background-color: rgba(0, 0, 0, 0.6);
-    height: 60vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/frontend/mission-banner.avif') center/cover no-repeat;
+    height: 70vh;
     min-height: 500px;
     display: flex;
     align-items: center;
@@ -21,114 +19,99 @@
 }
 
 .hero-content-inner h1 {
-    font-size: 48px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 56px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .hero-content-inner p {
-    font-size: 20px;
-    margin-bottom: 30px;
+    font-size: 22px;
+    margin-bottom: 35px;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    font-weight: 300;
 }
 
 .btn-hero-cta {
     background-color: #ff9800;
     color: #fff;
-    padding: 15px 40px;
-    border-radius: 30px;
+    padding: 16px 45px;
+    border-radius: 50px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 18px;
-    transition: background 0.3s;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(255, 152, 0, 0.4);
 }
 
 .btn-hero-cta:hover {
     background-color: #e65100;
-    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 152, 0, 0.6);
 }
 
 /* 2. Intro Section */
 .intro-section {
-    padding: 80px 0;
+    padding: 100px 0;
 }
 
 .intro-content {
     display: flex;
-    gap: 50px;
+    gap: 60px;
     align-items: center;
 }
 
-.intro-text {
-    flex: 1;
-}
-
 .intro-text h2 {
-    font-size: 36px;
+    font-size: 40px;
+    font-weight: 700;
     color: #2c2c2c;
-    margin-bottom: 20px;
-}
-
-.intro-text p {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #555;
-    margin-bottom: 15px;
-}
-
-.intro-image {
-    flex: 1;
+    margin-bottom: 25px;
 }
 
 .intro-image img {
-    width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 /* 3. Stats Section */
 .stats-section {
     background-color: #e7f1fb;
-    padding: 60px 0;
+    padding: 80px 0;
     text-align: center;
 }
 
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
 .stat-box h3 {
-    font-size: 48px;
+    font-size: 52px;
+    font-weight: 800;
     color: #ff9800;
-    margin-bottom: 10px;
-}
-
-.stat-box p {
-    font-size: 18px;
-    font-weight: 600;
-    color: #555;
+    margin-bottom: 5px;
 }
 
 /* 4. Challenges Section */
 .challenges-section {
-    padding: 80px 0;
+    padding: 100px 0;
     background: #fff;
 }
 
 .section-title {
     text-align: center;
-    font-size: 36px;
-    margin-bottom: 60px;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 70px;
     position: relative;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
 }
 
 .section-title::after {
@@ -137,197 +120,226 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
+    width: 80px;
+    height: 4px;
     background: #ff9800;
+    border-radius: 2px;
 }
 
 .challenges-grid {
     display: flex;
-    gap: 30px;
-    padding: 0 20px;
+    gap: 40px;
 }
 
 .challenge-card {
-    flex: 1;
-    text-align: center;
-    padding: 40px 20px;
+    background: #fff;
+    padding: 50px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    /* Softer shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #eee;
-    border-radius: 8px;
-    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .challenge-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
-.challenge-icon {
-    font-size: 40px;
-    color: #ff9800;
+/* 6. Success Stories (Refined) */
+.stories-section {
+    padding: 100px 0;
+    background-color: #f4f9f4;
+    /* Light mint/green tint typical of field work/nature context */
+}
+
+.stories-layout {
+    display: flex;
+    gap: 60px;
+}
+
+.stories-sidebar {
+    width: 30%;
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+}
+
+.section-title-left {
+    font-size: 48px;
+    font-weight: 800;
+    color: #2c2c2c;
+    line-height: 1.1;
     margin-bottom: 20px;
 }
 
-.challenge-card h4 {
-    font-size: 22px;
-    margin-bottom: 15px;
+.stories-intro {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
 }
 
-/* 5. Approach Section (Steps) */
-.approach-section {
-    padding: 80px 0;
-    background-color: #f9f9f9;
+.stories-deco-line {
+    width: 60px;
+    height: 5px;
+    background-color: #ff9800;
+    border-radius: 3px;
 }
 
-.steps-timeline {
+.stories-list {
+    width: 70%;
     display: flex;
-    justify-content: space-between;
-    position: relative;
-    max-width: 1000px;
-    margin: 0 auto;
+    flex-direction: column;
+    gap: 40px;
 }
 
-.steps-timeline::before {
-    content: '';
-    position: absolute;
-    top: 40px;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: #ddd;
-    z-index: 1;
-}
-
-.step-item {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    background: #f9f9f9;
-    padding: 0 10px;
-    flex: 1;
-}
-
-.step-number {
-    width: 80px;
-    height: 80px;
+.story-card-refined {
     background: #fff;
-    border: 4px solid #ff9800;
-    border-radius: 50%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 32px;
-    font-weight: 700;
-    color: #ff9800;
-    margin: 0 auto 20px;
-}
-
-/* 6. Success Stories */
-.stories-section {
-    padding: 80px 0;
-}
-
-.story-card {
-    display: flex;
-    background: #fff;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
+    border-radius: 20px;
     overflow: hidden;
-    margin-bottom: 40px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
 }
 
-.story-img {
-    flex: 1;
+.story-card-refined:hover {
+    transform: translateY(-5px);
+}
+
+.story-img-refined {
+    width: 40%;
     min-height: 300px;
 }
 
-.story-img img {
+.story-img-refined img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.story-content {
-    flex: 1;
-    padding: 40px;
+.story-content-refined {
+    width: 60%;
+    padding: 40px 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.story-content h3 {
-    margin-bottom: 15px;
-    color: #2c2c2c;
+.story-content-refined h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
 }
 
-/* 7. Gallery Grid */
+.story-content-refined p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.story-author {
+    font-weight: 700;
+    color: #ff9800;
+    font-style: normal !important;
+}
+
+/* 7. Gallery (Refined) */
 .page-gallery {
-    padding: 60px 0;
+    padding: 100px 0;
+    background: #fff;
 }
 
-.gallery-grid-static {
+.gallery-grid-polished {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
 }
 
-.gallery-grid-static img {
+.gallery-item-polished {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 280px;
+    cursor: pointer;
+}
+
+.gallery-item-polished img {
     width: 100%;
-    height: 250px;
+    height: 100%;
     object-fit: cover;
-    border-radius: 8px;
-    transition: transform 0.3s;
+    transition: transform 0.5s ease;
 }
 
-.gallery-grid-static img:hover {
-    transform: scale(1.05);
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-/* 8. CTA Section */
-.cta-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../assets/frontend/women-empowerment.jpg') center/cover;
-    padding: 100px 0;
-    text-align: center;
+.gallery-overlay i {
     color: #fff;
+    font-size: 32px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 50%;
+    backdrop-filter: blur(5px);
 }
 
-.cta-content h2 {
-    font-size: 42px;
-    margin-bottom: 20px;
+.gallery-item-polished:hover img {
+    transform: scale(1.1);
 }
 
-.cta-content p {
-    font-size: 20px;
-    margin-bottom: 40px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+.gallery-item-polished:hover .gallery-overlay {
+    opacity: 1;
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-
-    .intro-content,
-    .challenges-grid,
-    .story-card {
+@media (max-width: 992px) {
+    .stories-layout {
         flex-direction: column;
     }
 
-    .hero-section-inner {
-        height: auto;
-        padding: 100px 20px;
+    .stories-sidebar {
+        width: 100%;
+        position: static;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .stories-deco-line {
+        margin: 0 auto;
+    }
+
+    .stories-list {
+        width: 100%;
+    }
+
+    .story-card-refined {
+        flex-direction: column;
+    }
+
+    .story-img-refined,
+    .story-content-refined {
+        width: 100%;
+    }
+
+    .story-img-refined {
+        height: 250px;
     }
 
     .hero-content-inner h1 {
-        font-size: 32px;
-    }
-
-    .steps-timeline {
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    .steps-timeline::before {
-        display: none;
+        font-size: 36px;
     }
 }
