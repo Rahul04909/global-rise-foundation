@@ -142,6 +142,19 @@ define('BASE_URL', '../../');
             }
         }
         
+        /* Promo Banner */
+        .promo-banner-section {
+            width: 100%;
+            overflow: hidden;
+            display: block;
+            margin-top: -5px; /* Adjusting spacing */
+        }
+        .promo-banner-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
     </style>
 </head>
 <body>
@@ -212,6 +225,11 @@ define('BASE_URL', '../../');
                 </div>
             </div>
         </div>
+    </section>
+    
+    <!-- PROMO BANNER SECTION -->
+    <section class="promo-banner-section">
+        <img src="<?php echo BASE_URL; ?>assets/frontend/rural-promo-banner.png" alt="Help Rural Children" class="promo-banner-img">
     </section>
     
     <!-- THE PROBLEM SECTION (Custom grid reusing program card styles for consistency) -->
