@@ -146,6 +146,11 @@ define('BASE_URL', '../../');
 
         /* --- 4. PILLAR MODULES (Interactive) --- */
         .pillars-section { padding: 150px 0; }
+        .pillar-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
         .pillar-premium-card {
             background: var(--white);
             padding: 80px 50px;
@@ -252,6 +257,11 @@ define('BASE_URL', '../../');
         }
 
         /* --- 8. PREMIUM DONATION CARDS --- */
+        .donation-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
         .tier-card {
             background: var(--white);
             padding: 60px 45px;
@@ -323,6 +333,7 @@ define('BASE_URL', '../../');
             .hero-glass-card { margin-left: 0; padding: 40px; }
             .vision-flex { flex-direction: column; }
             .crisis-grid { grid-template-columns: 1fr; }
+            .pillar-grid, .donation-grid { grid-template-columns: 1fr; }
             .ribbon-stats { flex-direction: column; gap: 40px; }
             .story-hero-box { grid-template-columns: 1fr; }
             .story-text-canvas { padding: 40px; }
@@ -550,7 +561,7 @@ define('BASE_URL', '../../');
                 <h2 style="font-size: 3.5rem; color: var(--rural-deep); font-weight: 900;">Empower a <span>Village</span> Child.</h2>
                 <p style="max-width: 650px; margin: 20px auto 0; color: #777;">Investing in a child's education is the highest ROI for humanity. Choose your sponsorship tier.</p>
             </div>
-            <div class="pillar-grid" style="margin-top: 60px;">
+            <div class="donation-grid" style="margin-top: 60px;">
                 <div class="tier-card">
                     <h3>Basic Learning Kit</h3>
                     <p>Covers books, uniform, and a basic health insurance for one year.</p>
