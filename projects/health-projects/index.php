@@ -345,7 +345,7 @@ define('BASE_URL', '../../');
                     </div>
                 </div>
                 <div class="health-image">
-                    <img src="<?php echo BASE_URL; ?>assets/frontend/senior-citizen-care.jpg" alt="Rural healthcare crisis">
+                    <img src="<?php echo BASE_URL; ?>assets/pages/Rural-healthcare-project.jpg" alt="Rural healthcare crisis">
                 </div>
             </div>
         </div>
