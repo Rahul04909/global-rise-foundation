@@ -403,7 +403,7 @@ define('BASE_URL', '../../');
                    <a href="#" class="btn-swachh" style="margin-top: 30px;">Support a Corridor</a>
                 </div>
                 <div class="feature-img">
-                    <img src="<?php echo BASE_URL; ?>assets/frontend/educating-slum-children.jpg" alt="Plastic Free">
+                    <img src="<?php echo BASE_URL; ?>assets/pages/ph_33402_123641.jpg" alt="Plastic Free">
                 </div>
             </div>
         </div>
