@@ -332,7 +332,7 @@ define('BASE_URL', '../../');
                         Breaking the digital divide. We equip our centers with tablets and basic computer labs, introducing children to coding, digital art, and world-wide web resources to broaden their horizons.
                     </p>
                 </div>
-                <div class="pillar-pic" style="background-image: url('<?php echo BASE_URL; ?>assets/pages/asap-1.png');"></div>
+                <div class="pillar-pic" style="background-image: url('<?php echo BASE_URL; ?>assets/pages/asap-2.png');"></div>
             </div>
         </div>
     </section>
