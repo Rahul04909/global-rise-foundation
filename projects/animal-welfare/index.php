@@ -370,7 +370,7 @@ define('BASE_URL', '../../');
             
             <div class="adoption-grid">
                 <div class="pet-card">
-                    <div class="pet-img" style="background-image: url('<?php echo BASE_URL; ?>assets/frontend/Girl-Child-Education.jpg');"> <!-- Placeholder Pet Image -->
+                    <div class="pet-img" style="background-image: url('<?php echo BASE_URL; ?>assets/pages/heart-soul-dogs.png');"> <!-- Placeholder Pet Image -->
                         <span class="tag-available">Foster Home</span>
                     </div>
                     <div class="pet-info">
