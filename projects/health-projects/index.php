@@ -361,7 +361,7 @@ define('BASE_URL', '../../');
             
             <div class="pillar-grid">
                 <div class="pillar-card">
-                    <i class="fas fa-person-breastfeeding pillar-icon"></i>
+                    <i class="fas fa-user-nurse pillar-icon"></i>
                     <h3>Maternal Health</h3>
                     <p>Ensuring safe institutional deliveries, prenatal nutrition sessions, and neonatal care for village mothers.</p>
                 </div>
