@@ -398,7 +398,7 @@ define('BASE_URL', '../../');
             </div>
             <div class="story-container">
                 <div class="story-img">
-                    <img src="<?php echo BASE_URL; ?>assets/frontend/rural-children-education.jpg" alt="Successful individual">
+                    <img src="<?php echo BASE_URL; ?>assets/pages/locomotor-disability.webp" alt="Successful individual">
                 </div>
                 <div class="story-txt">
                     <i class="fas fa-quote-left" style="font-size: 3rem; color: var(--pwd-secondary); margin-bottom: 20px;"></i>
