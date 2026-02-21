@@ -332,7 +332,7 @@ define('BASE_URL', '../../');
                     </ul>
                 </div>
                 <div style="flex: 1; min-width: 300px;">
-                    <img src="<?php echo BASE_URL; ?>assets/frontend/Girl-Child-Education.jpg" alt="Training" style="width: 100%; border-radius: 15px; box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
+                    <img src="<?php echo BASE_URL; ?>assets/pages/mock-drill.jpg" alt="Training" style="width: 100%; border-radius: 15px; box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
                 </div>
              </div>
         </div>
