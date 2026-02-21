@@ -281,7 +281,7 @@ define('BASE_URL', '../../');
         <div class="container" style="display: block;">
             <div class="split-section">
                 <div class="split-image">
-                    <img src="<?php echo BASE_URL; ?>assets/frontend/educating-slum-children.jpg" alt="Slum Education Reality">
+                    <img src="<?php echo BASE_URL; ?>assets/pages/slum-education.webp" alt="Slum Education Reality">
                 </div>
                 <div class="split-content">
                     <span class="accent-tag">The Challenge</span>
