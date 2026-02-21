@@ -363,12 +363,12 @@ define('BASE_URL', '../../');
              <h2 style="color: var(--clean-primary); margin-bottom: 30px;">Changing <span>Mindsets</span></h2>
              <p style="max-width: 800px; margin: 0 auto 50px; line-height: 1.8; color: #555;">Cleanliness is a habit, not just an act. We conduct street plays, school workshops, and door-to-door awareness drives to eliminate open defecation and littering permanently.</p>
              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-                <div style="background: url('<?php echo BASE_URL; ?>assets/frontend/rural-children-education.jpg') center/cover; height: 300px; border-radius: 20px; display: flex; align-items: flex-end; padding: 30px;">
+                <div style="background: url('<?php echo BASE_URL; ?>assets/pages/scholll.webp') center/cover; height: 300px; border-radius: 20px; display: flex; align-items: flex-end; padding: 30px;">
                     <div style="background: rgba(255,255,255,0.9); padding: 20px; border-radius: 10px; width: 100%;">
                         <h4>School Hygiene Clubs</h4>
                     </div>
                 </div>
-                <div style="background: url('<?php echo BASE_URL; ?>assets/frontend/Girl-Child-Education.jpg') center/cover; height: 300px; border-radius: 20px; display: flex; align-items: flex-end; padding: 30px;">
+                <div style="background: url('<?php echo BASE_URL; ?>assets/pages/68357438.avif') center/cover; height: 300px; border-radius: 20px; display: flex; align-items: flex-end; padding: 30px;">
                     <div style="background: rgba(255,255,255,0.9); padding: 20px; border-radius: 10px; width: 100%;">
                         <h4>Nukkad Natak (Street Plays)</h4>
                     </div>
