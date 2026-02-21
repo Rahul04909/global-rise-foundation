@@ -239,7 +239,7 @@ define('BASE_URL', '../../');
                     <h3>Geriatric Health</h3>
                     <p>Mobile clinics and specialized health camps providing geriatric check-ups, medication, and physiotherapy.</p>
                 </div>
-                <div class="senior-card">
+                <div class="senior-award">
                     <i class="fas fa-hands-holding-heart"></i>
                     <h3>Companionship</h3>
                     <p>Connecting elders with youth volunteers through physical visits and "Silver Line" telephone companionship.</p>
@@ -297,7 +297,7 @@ define('BASE_URL', '../../');
         <div class="container" style="display: block;">
             <div class="story-block">
                 <div class="story-img">
-                    <img src="<?php echo BASE_URL; ?>assets/frontend/Girl-Child-Education.jpg" alt="Story Image">
+                    <img src="<?php echo BASE_URL; ?>assets/pages/pmpuja.png" alt="Story Image">
                 </div>
                 <div class="story-content">
                     <span style="color: var(--senior-secondary); font-weight: 700; text-transform: uppercase;">Feature Story</span>
