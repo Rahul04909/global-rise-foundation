@@ -32,7 +32,7 @@ define('BASE_URL', '../../');
         /* Hero Styling */
         .senior-hero {
             height: 85vh;
-            background: linear-gradient(rgba(109, 89, 122, 0.6), rgba(109, 89, 122, 0.4)), url('<?php echo BASE_URL; ?>assets/frontend/Girl-Child-Education.jpg'); /* Placeholder image, should be replaced with elder care image */
+            background: linear-gradient(rgba(109, 89, 122, 0.6), rgba(109, 89, 122, 0.4)), url('<?php echo BASE_URL; ?>assets/pages/dignity.webp'); /* Placeholder image, should be replaced with elder care image */
             background-size: cover;
             background-position: center;
             display: flex;
@@ -219,7 +219,7 @@ define('BASE_URL', '../../');
                     </div>
                 </div>
                 <div style="flex: 1; min-width: 350px;">
-                    <img src="<?php echo BASE_URL; ?>assets/frontend/rural-about.jpg" alt="Elderly Care" style="width: 100%; border-radius: 50% 10% 50% 10%; border: 15px solid white; box-shadow: 0 20px 40px rgba(0,0,0,0.05);">
+                    <img src="<?php echo BASE_URL; ?>assets/pages/the-silent-crisis.webp" alt="Elderly Care" style="width: 100%; border-radius: 50% 10% 50% 10%; border: 15px solid white; box-shadow: 0 20px 40px rgba(0,0,0,0.05);">
                 </div>
             </div>
         </div>
