@@ -329,7 +329,7 @@ define('BASE_URL', '../../');
                     </div>
                 </div>
                 <div class="info-image">
-                    <img src="<?php echo BASE_URL; ?>assets/frontend/rural-about.jpg" alt="Rural student studying">
+                    <img src="<?php echo BASE_URL; ?>assets/pages/classroom-small-size-1.png" alt="Rural student studying">
                 </div>
             </div>
         </div>
