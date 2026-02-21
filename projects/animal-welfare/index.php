@@ -285,7 +285,7 @@ define('BASE_URL', '../../');
                     </div>
                 </div>
                 <div class="split-image">
-                    <img src="<?php echo BASE_URL; ?>assets/frontend/animal-welfare.jpg" alt="Animal Rescue Reality">
+                    <img src="<?php echo BASE_URL; ?>assets/pages/animal-welfare.jpg" alt="Animal Rescue Reality">
                 </div>
             </div>
         </div>
