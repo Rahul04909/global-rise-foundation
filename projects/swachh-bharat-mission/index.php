@@ -32,7 +32,7 @@ define('BASE_URL', '../../');
         /* Hero Styling */
         .swachh-hero {
             height: 85vh;
-            background: linear-gradient(rgba(0, 119, 182, 0.7), rgba(0, 119, 182, 0.4)), url('<?php echo BASE_URL; ?>assets/frontend/rural-about.jpg');
+            background: linear-gradient(rgba(0, 119, 182, 0.7), rgba(0, 119, 182, 0.4)), url('<?php echo BASE_URL; ?>assets/pages/swachhbharat-1494157878.jpg');
             background-size: cover;
             background-position: center;
             display: flex;
