@@ -29,7 +29,7 @@ define('BASE_URL', '../../');
         /* Hero Styling */
         .dm-hero {
             height: 90vh;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('<?php echo BASE_URL; ?>assets/frontend/disaster-management.jpg');
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('<?php echo BASE_URL; ?>assets/pages/disaster-management-hero-banners.webp');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -106,7 +106,7 @@ define('BASE_URL', '../../');
             overflow: hidden;
         }
         .action-content { flex: 1; padding: 60px; }
-        .action-image { flex: 1; background: url('<?php echo BASE_URL; ?>assets/pages/disaster-management-hero-banners.webp') center/cover; }
+        .action-image { flex: 1; background: url('<?php echo BASE_URL; ?>assets/pages/be-prepaerd.webp') center/cover; }
         .action-content h2 { font-size: 2.2rem; margin-bottom: 20px; }
         .action-list { list-style: none; margin-top: 30px; }
         .action-list li {
