@@ -106,7 +106,7 @@ define('BASE_URL', '../../');
             overflow: hidden;
         }
         .action-content { flex: 1; padding: 60px; }
-        .action-image { flex: 1; background: url('<?php echo BASE_URL; ?>assets/frontend/disaster-management.png') center/cover; }
+        .action-image { flex: 1; background: url('<?php echo BASE_URL; ?>assets/pages/disaster-management-hero-banners.webp') center/cover; }
         .action-content h2 { font-size: 2.2rem; margin-bottom: 20px; }
         .action-list { list-style: none; margin-top: 30px; }
         .action-list li {
