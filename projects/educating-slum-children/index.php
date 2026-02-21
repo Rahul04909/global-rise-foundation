@@ -31,7 +31,7 @@ define('BASE_URL', '../../');
         /* Hero Styling */
         .slum-hero {
             height: 85vh;
-            background: linear-gradient(rgba(2, 48, 71, 0.7), rgba(2, 48, 71, 0.5)), url('<?php echo BASE_URL; ?>assets/pages/be5b3a2d-1438-4a4f-831d-11bb4f07829f-wm.png');
+            background: linear-gradient(rgba(2, 48, 71, 0.3), rgba(2, 48, 71, 0.2)), url('<?php echo BASE_URL; ?>assets/pages/be5b3a2d-1438-4a4f-831d-11bb4f07829f-wm.png');
             background-size: cover;
             background-position: center;
             display: flex;
