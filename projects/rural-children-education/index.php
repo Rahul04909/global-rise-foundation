@@ -470,13 +470,13 @@ define('BASE_URL', '../../');
                 <p style="max-width: 850px; margin: 25px auto 0; font-size: 1.2rem; color: #555;">Beyond textbooks, we prepare students for the local and global economy through practical vocational integration.</p>
             </div>
             <div class="lab-grid">
-                <div class="lab-card" style="background-image: url('<?php echo BASE_URL; ?>assets/frontend/disaster-management.jpg');">
+                <div class="lab-card" style="background-image: url('<?php echo BASE_URL; ?>assets/pages/teaching-hub.webp');">
                     <div class="lab-info">
                         <h4>Agri-Tech Hubs</h4>
                         <p>Teaching sustainable farming and water management techniques to the youth.</p>
                     </div>
                 </div>
-                <div class="lab-card" style="background-image: url('<?php echo BASE_URL; ?>assets/frontend/educating-slum-children.jpg');">
+                <div class="lab-card" style="background-image: url('<?php echo BASE_URL; ?>assets/pages/young-schoolboy-learning-electronic-circuit-board-detail-focus-board-component_1048944-6121110.avif');">
                     <div class="lab-info">
                         <h4>Digital Mechanics</h4>
                         <p>Basics of smartphone repair and small-scale electronic maintenance for local livelihoods.</p>
