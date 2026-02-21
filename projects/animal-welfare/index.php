@@ -407,7 +407,7 @@ define('BASE_URL', '../../');
     <section class="highlight-bg">
         <div class="container" style="display: block;">
             <div class="spotlight-box">
-                <div class="spotlight-img" style="background-image: url('<?php echo BASE_URL; ?>assets/frontend/disaster-management.png');"></div>
+                <div class="spotlight-img" style="background-image: url('<?php echo BASE_URL; ?>assets/pages/transformation-of-sheru.webp');"></div>
                 <div class="spotlight-txt">
                     <span style="color: var(--animal-accent); font-weight: 700;">Rescue Tape #442</span>
                     <h3>The Transformation of Sheru</h3>
@@ -416,7 +416,7 @@ define('BASE_URL', '../../');
                     </p>
                     <div style="display: flex; gap: 20px;">
                         <a href="#" class="btn-animal">Read Full Tale</a>
-                        <a href="#" style="color: var(--animal-secondary); font-weight: 700; text-decoration: none;">Watch Video <i class="fas fa-play-circle"></i></a>
+                        <!-- <a href="#" style="color: var(--animal-secondary); font-weight: 700; text-decoration: none;">Watch Video <i class="fas fa-play-circle"></i></a> -->
                     </div>
                 </div>
             </div>
