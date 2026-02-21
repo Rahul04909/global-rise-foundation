@@ -32,7 +32,7 @@ define('BASE_URL', '../../');
         /* Hero Section */
         .we-hero {
             height: 90vh;
-            background: linear-gradient(rgba(128, 14, 19, 0.7), rgba(128, 14, 19, 0.4)), url('<?php echo BASE_URL; ?>assets/frontend/Girl-Child-Education.jpg');
+            background: linear-gradient(rgba(128, 14, 19, 0.7), rgba(128, 14, 19, 0.4)), url('<?php echo BASE_URL; ?>assets/pages/9cf670cf-c74c-456b-89fa-496189fd50c8-wm.png');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -258,7 +258,7 @@ define('BASE_URL', '../../');
                    </div>
                 </div>
                 <div class="we-split-img">
-                   <img src="<?php echo BASE_URL; ?>assets/frontend/Girl-Child-Education.jpg" alt="Woman empowerment">
+                   <img src="<?php echo BASE_URL; ?>assets/pages/UN0591783.jpg.webp" alt="Woman empowerment">
                 </div>
             </div>
         </div>
@@ -310,7 +310,7 @@ define('BASE_URL', '../../');
                     <a href="#" class="btn-we" style="margin-top: 40px;">Form an SHG</a>
                  </div>
                  <div class="we-split-img">
-                    <img src="<?php echo BASE_URL; ?>assets/frontend/rural-about.jpg" alt="SHG Meeting">
+                    <img src="<?php echo BASE_URL; ?>assets/pages/PRATHAM_JAMEEL_HERO_OG.webp" alt="SHG Meeting">
                  </div>
             </div>
         </div>
@@ -345,7 +345,7 @@ define('BASE_URL', '../../');
         <div class="container" style="display: block;">
             <div class="story-spotlight">
                 <div class="story-img">
-                    <img src="<?php echo BASE_URL; ?>assets/frontend/Girl-Child-Education.jpg" alt="Anita Story">
+                    <img src="<?php echo BASE_URL; ?>assets/pages/anita.webp" alt="Anita Story">
                 </div>
                 <div class="story-txt">
                     <span style="color: var(--we-accent); font-weight: 800; text-transform: uppercase; letter-spacing: 2px;">Success Spotlight</span>
@@ -384,7 +384,7 @@ define('BASE_URL', '../../');
                    </div>
                 </div>
                 <div class="we-split-img">
-                    <img src="<?php echo BASE_URL; ?>assets/frontend/rural-children-education.jpg" alt="Sakhi Centers">
+                    <img src="<?php echo BASE_URL; ?>assets/pages/anchal_10_2000x.webp" alt="Sakhi Centers">
                 </div>
             </div>
         </div>
