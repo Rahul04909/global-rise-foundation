@@ -452,7 +452,7 @@ define('BASE_URL', '../../');
                     </ul>
                 </div>
                 <div class="health-image">
-                    <img src="<?php echo BASE_URL; ?>assets\pages\Asha-workers.jpg" alt="ASHA workers training" style="box-shadow: -40px 40px 0 var(--health-soft);">
+                    <img src="<?php echo BASE_URL; ?>assets/pages/Asha-workers.jpg" alt="ASHA workers training" style="box-shadow: -40px 40px 0 var(--health-soft);">
                 </div>
             </div>
         </div>
@@ -466,7 +466,7 @@ define('BASE_URL', '../../');
             </div>
             <div class="story-wrapper">
                 <div class="story-visual">
-                    <img src="<?php echo BASE_URL; ?>assets/frontend/senior-citizen-care.jpg" alt="Patient Recovery">
+                    <img src="<?php echo BASE_URL; ?>assets/pages/menna-miracle.jpg" alt="Patient Recovery">
                 </div>
                 <div class="story-data">
                     <i class="fas fa-quote-left" style="font-size: 4.5rem; color: var(--health-soft); margin-bottom: 40px; display: block;"></i>
