@@ -450,7 +450,7 @@ define('BASE_URL', '../../');
             </div>
             <div class="story-card">
                 <div class="story-img">
-                    <img src="<?php echo BASE_URL; ?>assets/frontend/rural-about.jpg" alt="Alumni Arjun">
+                    <img src="<?php echo BASE_URL; ?>assets/pages/arjun.jpg" alt="Alumni Arjun">
                 </div>
                 <div class="story-txt">
                     <i class="fas fa-quote-left" style="font-size: 4rem; color: var(--rural-secondary); margin-bottom: 35px; display: block;"></i>
