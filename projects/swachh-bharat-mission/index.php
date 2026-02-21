@@ -244,7 +244,7 @@ define('BASE_URL', '../../');
                     </div>
                 </div>
                 <div class="feature-img">
-                    <img src="<?php echo BASE_URL; ?>assets/frontend/disaster-management.jpg" alt="Waste Crisis">
+                    <img src="<?php echo BASE_URL; ?>assets/pages/India-World-Water-Day_Webf-300x205.jpg" alt="Waste Crisis">
                 </div>
             </div>
         </div>
@@ -351,7 +351,7 @@ define('BASE_URL', '../../');
                     </ul>
                 </div>
                 <div class="feature-img">
-                    <img src="<?php echo BASE_URL; ?>assets/frontend/animal-welfare.jpg" alt="Innovation">
+                    <img src="<?php echo BASE_URL; ?>assets/pages/461215027-H-1024x700.webp" alt="Innovation">
                 </div>
             </div>
         </div>
