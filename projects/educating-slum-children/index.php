@@ -390,7 +390,7 @@ define('BASE_URL', '../../');
                     </div>
                 </div>
                 <div class="split-image" style="text-align: right;">
-                    <img src="<?php echo BASE_URL; ?>assets/frontend/Girl-Child-Education.jpg" alt="Child Expression" style="box-shadow: -20px 20px 0 var(--slum-primary);">
+                    <img src="<?php echo BASE_URL; ?>assets/pages/asap-1.png" alt="Child Expression" style="box-shadow: -20px 20px 0 var(--slum-primary);">
                 </div>
             </div>
         </div>
