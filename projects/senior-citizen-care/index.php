@@ -318,7 +318,7 @@ define('BASE_URL', '../../');
         <div class="container" style="display: block;">
             <div style="display: flex; gap: 50px; align-items: center; flex-wrap: wrap;">
                   <div style="flex: 1; min-width: 300px;">
-                      <img src="<?php echo BASE_URL; ?>assets/frontend/disaster-management.jpg" alt="Health Camp" style="width: 100%; border-radius: 20px;">
+                      <img src="<?php echo BASE_URL; ?>assets/pages/3rd-year.jpg" alt="Health Camp" style="width: 100%; border-radius: 20px;">
                   </div>
                   <div style="flex: 1.5; min-width: 300px;">
                       <h2 style="color: var(--senior-primary); margin-bottom: 20px;">Holistic Longevity Programs</h2>
