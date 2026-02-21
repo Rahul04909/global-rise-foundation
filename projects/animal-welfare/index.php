@@ -380,7 +380,7 @@ define('BASE_URL', '../../');
                     </div>
                 </div>
                 <div class="pet-card">
-                    <div class="pet-img" style="background-image: url('<?php echo BASE_URL; ?>assets/frontend/rural-children-education.jpg');"> <!-- Placeholder Pet Image -->
+                    <div class="pet-img" style="background-image: url('<?php echo BASE_URL; ?>assets/pages/bruno-dog.jpg');"> <!-- Placeholder Pet Image -->
                         <span class="tag-available">Shelter Resident</span>
                     </div>
                     <div class="pet-info">
@@ -390,7 +390,7 @@ define('BASE_URL', '../../');
                     </div>
                 </div>
                 <div class="pet-card">
-                    <div class="pet-img" style="background-image: url('<?php echo BASE_URL; ?>assets/frontend/disaster-management.jpg');"> <!-- Placeholder Pet Image -->
+                    <div class="pet-img" style="background-image: url('<?php echo BASE_URL; ?>assets/pages/cow-rescue.avif');"> <!-- Placeholder Pet Image -->
                         <span class="tag-available">Under Treatment</span>
                     </div>
                     <div class="pet-info">
