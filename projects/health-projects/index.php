@@ -452,7 +452,7 @@ define('BASE_URL', '../../');
                     </ul>
                 </div>
                 <div class="health-image">
-                    <img src="<?php echo BASE_URL; ?>assets/frontend/educating-slum-children.jpg" alt="ASHA workers training" style="box-shadow: -40px 40px 0 var(--health-soft);">
+                    <img src="<?php echo BASE_URL; ?>assets\pages\Asha-workers.jpg" alt="ASHA workers training" style="box-shadow: -40px 40px 0 var(--health-soft);">
                 </div>
             </div>
         </div>
