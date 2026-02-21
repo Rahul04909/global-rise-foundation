@@ -486,13 +486,13 @@ define('BASE_URL', '../../');
                 <p style="max-width: 900px; margin: 30px auto 0; font-size: 1.3rem; color: #555;">We don't just provide care; we build careers. Our skill labs certify village youth as paramedics and dialysis technicians.</p>
             </div>
             <div class="training-grid">
-                <div class="training-card" style="background-image: url('<?php echo BASE_URL; ?>assets/frontend/disaster-management.jpg');">
+                <div class="training-card" style="background-image: url('<?php echo BASE_URL; ?>assets/pages/P1010042.webp');">
                     <div class="training-info">
                         <h4>First Response Academy</h4>
                         <p>Intensive certification for immediate emergency and trauma management.</p>
                     </div>
                 </div>
-                <div class="training-card" style="background-image: url('<?php echo BASE_URL; ?>assets/frontend/persons-with-disabilites.jpg');">
+                <div class="training-card" style="background-image: url('<?php echo BASE_URL; ?>assets/pages/OIP.webp');">
                     <div class="training-info">
                         <h4>Laboratory Technicians</h4>
                         <p>Training local youth to operate blood testing and diagnostic equipment.</p>
