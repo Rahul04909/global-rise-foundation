@@ -321,7 +321,7 @@ define('BASE_URL', '../../');
                         We establish "Zindagi Centers" right in the heart of slum communities. These centers act as bridge-schools, helping children catch up to their age-appropriate grade levels and preparing them for mainstream formal education.
                     </p>
                 </div>
-                <div class="pillar-pic" style="background-image: url('<?php echo BASE_URL; ?>assets/frontend/Girl-Child-Education.jpg');"></div>
+                <div class="pillar-pic" style="background-image: url('<?php echo BASE_URL; ?>assets/pages/asap.png');"></div>
             </div>
 
             <div class="pillar-row" style="flex-direction: row-reverse;">
@@ -332,7 +332,7 @@ define('BASE_URL', '../../');
                         Breaking the digital divide. We equip our centers with tablets and basic computer labs, introducing children to coding, digital art, and world-wide web resources to broaden their horizons.
                     </p>
                 </div>
-                <div class="pillar-pic" style="background-image: url('<?php echo BASE_URL; ?>assets/frontend/rural-children-education.jpg');"></div>
+                <div class="pillar-pic" style="background-image: url('<?php echo BASE_URL; ?>assets/pages/asap-1.png');"></div>
             </div>
         </div>
     </section>
