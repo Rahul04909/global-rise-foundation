@@ -239,8 +239,8 @@ define('BASE_URL', '../../');
                     <h3>Geriatric Health</h3>
                     <p>Mobile clinics and specialized health camps providing geriatric check-ups, medication, and physiotherapy.</p>
                 </div>
-                <div class="senior-award">
-                    <i class="fas fa-hands-holding-heart"></i>
+                <div class="senior-card">
+                    <i class="fas fa-award"></i>
                     <h3>Companionship</h3>
                     <p>Connecting elders with youth volunteers through physical visits and "Silver Line" telephone companionship.</p>
                 </div>
