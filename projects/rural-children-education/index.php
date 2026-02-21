@@ -436,7 +436,7 @@ define('BASE_URL', '../../');
                     </ul>
                 </div>
                 <div class="info-image">
-                    <img src="<?php echo BASE_URL; ?>assets/frontend/educating-slum-children.jpg" alt="Community governance meeting" style="box-shadow: -30px 30px 0 var(--rural-secondary);">
+                    <img src="<?php echo BASE_URL; ?>assets/pages/3-1-1024x640.jpg" alt="Community governance meeting" style="box-shadow: -30px 30px 0 var(--rural-secondary);">
                 </div>
             </div>
         </div>
