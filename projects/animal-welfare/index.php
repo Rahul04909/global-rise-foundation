@@ -439,7 +439,7 @@ define('BASE_URL', '../../');
                     </ul>
                 </div>
                 <div class="split-image" style="transform: rotate(-2deg);">
-                    <img src="<?php echo BASE_URL; ?>assets\pages\abc-image.webp" alt="Scientific Care">
+                    <img src="<?php echo BASE_URL; ?>assets/pages/abc-image.webp" alt="Scientific Care">
                 </div>
             </div>
         </div>
